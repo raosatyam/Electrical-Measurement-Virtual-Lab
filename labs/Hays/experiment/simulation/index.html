@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hays Bridge</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="shaa384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <script src="jsplumb.min.js"></script>
+    <script
+      async="true"
+      src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"
+    ></script>
+
+    <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div
+      style="
+        position: absolute;
+        border: 2px solid black;
+        top: -57px;
+        left: -15px;
+      "
+    >
+      <div class="container-fluid">
+        <div
+          style="
+            position: relative;
+            top: 66.8em;
+            left: -1em;
+            color: white;
+            background-color: #cb3535;
+            width: 101.6%;
+            text-align: center;
+            height: 33px;
+            padding: 5px;
+          "
+        >
+          Copyright&copy;2023 | Lab developed by Virtual Labs, IIT Roorkee
+        </div>
+        <br />
+        <!-- <p style="background-color: #000dac;color:white;font-size:30px;text-align:center;border-radius:5px;    width: 100.8%;">Wheatstone Bridge
+			</p> -->
+        <div class="row">
+          <div class="col-md-2">
+            <h3
+              style="
+                position: absolute;
+                border: 2px solid black;
+                width: 399px;
+                text-align: center;
+                margin-left: 5px;
+                background-color: #cb3535;
+                color: white;
+                border-radius: 6px;
+              "
+            >
+            
+              Components
+            </h3>
+            <div
+              id="toolbox"
+              class="justify-content-center"
+              style="position: absolute; top: 20px; margin-left: 5px; width: 399px; height: 354px"
+            >
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+              <div class="control r">
+                <img src="../images/resistance.png" width="90px" height="70px" />
+              </div>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <div class="control c">
+                <img src="../images/capacitor.png" width="90px" height="70px" />
+              </div>
+              <!-- <br><br> -->
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+              <div class="control i">
+                <img src="../images/inductor.png" width="90px" height="70px" />
+              </div>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <div class="control s">
+                <img src="../images/source.png" width="90px" height="70px" />
+              </div>
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <!-- &nbsp; -->
+              <div class="control g">
+                <img src="../images/galvanometer.png" width="90px" height="70px" />
+              </div>
+            </div>
+            
+              <h3
+                style="
+                  position: absolute;
+                  border: 2px solid black;
+                  width: 399px;
+                  text-align: center;
+                  background-color: #cb3535;
+                  color: white;
+                  margin-left: 5px;
+                  border-radius: 6px;
+                  top: 410px;
+                "
+              >
+                Formulae
+              </h3>
+              <div
+                id="formulae"
+                style="
+                  position: absolute;
+                  top: 450px;
+                  width: 399px;
+                  padding: 12px;
+                  height: 550px;
+                  margin-left: 5px;
+                  border: 2px solid black;
+                "
+              >
+                <h5 style="color: #00741b">At Balance codition:</h5>
+                <b>
+                  <script type="math/asciimath" id="MathJax-Element-7">
+                    (R_1+j*omega*L_1)*(R_4 - j/(omega*C_4) )=     R_2*R_3
+                  </script></b
+                ><br >
+                
+                  <br>
+                <br >
+                <h5 style="color: #00741b">
+                  For inductor with high Quality factor:
+                </h5>
+                <script type="math/asciimath" id="MathJax-Element-8">
+                  L=R_2*R_3*C
+                </script>
+              </div>
+           
+          </div>
+
+          <div class="col-md-7" style="right: -76px">
+            <h3
+              style="
+                position: absolute;
+                border: 2px solid black;
+                border-radius: 6px;
+                width: 96.4%;
+                text-align: center;
+                right: 27px;
+                background-color: #cb3535;
+                color: white;
+              "
+            >
+              WorkSpace
+            </h3>
+            <div
+              id="diagram"
+              style="
+                height: 960px;
+                position: absolute;
+                width: 96.4%;
+                top: 20px;
+                right: 27px;
+              "
+            >
+
+         
+              <button
+              id="check"
+                style="
+                  position: absolute;
+                  bottom: 14px;
+                  right: 692px;
+                  width: 120px;
+                "
+                class="btn btn-danger"                
+              >
+              
+                Check Circuit
+                
+              </button>
+            </div>
+              <button
+                style="
+                  position: absolute;
+                  bottom: 53px;
+                  right: 567px;
+                  width: 120px;
+                "
+                class="btn btn-warning"
+                onclick="window.location.reload()"
+              >
+                Reset
+              </button>
+              <button
+                style="
+                  position: absolute;
+                  bottom: 53px;
+                  right: 414px;
+                  width: 120px;
+                "
+                class="btn btn-primary"
+                onclick="window.print()"
+              >
+                Print
+              </button>
+              <p style="position: absolute; top: 52px; right: 42px">
+                <a
+                  href="javascript:void(0)"
+                  onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='none'"
+                  class="btn btn-danger"
+                  ><b>Instructions</b></a
+                >
+              </p>
+            
+          </div>
+
+          <div class="col-md-3" id="instruction">
+            <div id="inst" class="col-sm">
+              <!-- <p style="    position: absolute;
+                top: 8px;"><a href="javascript:void(0)"
+                    onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'" class="btn btn-danger"><b>Instructions</b></a>
+                </p> -->
+              <div id="light" class="white_content">
+                <b>Hays Bridge Experiment</b><br />
+
+                <center>
+                  <img
+                    src="../images/hays_bridge.png"
+                    width="300px"
+                    height="300px"
+                    align="center"
+                  />
+                </center>
+                <br />
+                <ul>
+                  <b>STEP 1:</b>
+                  Pick up three resistances, a battery, a inductance, a capcitor
+                  and a galvanometer from the toolbox.
+                </ul>
+                <ul>
+                  <b>STEP 2:</b>
+                  Connect all component as shown in the figure to form a Hays
+                  Bridge Circuit.
+                </ul>
+
+                <ul>
+                  <b>STEP 3:</b>
+                  After making the circuit click on check circuit button to
+                  check the connections
+                </ul>
+                <ul>
+                  <b>STEP 4:</b>
+                  Now Enter the the value of R2, R3, Capacitance, Volatge and
+                  Frequency and try to make deflection in meter close to zero.
+                </ul>
+                <ul>
+                  <b>STEP 5:</b>
+                  Calculate the value of inductance using the formula given and
+                  check the value using the check button.
+                </ul>
+                <ul>
+                  <b>STEP 6:</b>
+                  Enter the value untill the bridge gets balanced.
+                </ul>
+                <ul>
+                  <b>STEP 7:</b>
+                  Click on submit button to add it into observation table.
+                </ul>
+                <ul>
+                  <b>STEP 8:</b>
+                  Repeat the Experiment for new generated value of inductance.
+                </ul>
+
+                <hr />
+                <a
+                  href="javascript:void(0)"
+                  onclick="document.getElementById('light').style.display='';document.getElementById('fade').style.display=''"
+                  class="btn btn-outline-danger"
+                  style="position: absolute; top: 20px; right: 20px"
+                  ><span
+                    style="padding-top: 6px"
+                    class="material-symbols-outlined"
+                  >
+                    close
+                  </span></a
+                >
+              </div>
+
+              <div id="fade" class="black_overlay"></div>
+
+             
+
+              <h3
+                style="
+                  position: relative;
+                  border: 2px solid black;
+                  width: 437px;
+                  text-align: center;
+                  background-color: #cb3535;
+                  color: white;
+                  border-radius: 6px;
+                  right: -30px;
+                "
+              >
+                Calculations
+              </h3>
+
+              <div
+                id="mydiv"
+                style="
+
+                
+                  border: 2px solid black;
+                  padding: 15px;
+                  width: 90%;
+                  position: absolute;
+                  top: 40px;
+                  right: 0px;
+                  height: 63%;
+                "
+              >
+                <h4>Give Inputs:</h4>
+                
+                
+                <br>
+                <p>
+                  <!-- <a style="
+                  border:  2px solid rgb(170, 164, 164);
+                  padding : 8px;
+                  border-radius :6px;
+                  margin: 3px;
+                  position: absolute;
+                  top: 60px;
+                  font-size: x-large;
+                  left: 18px;
+                  "
+                  >
+                   <strong>L2= 10 mH
+</strong>                  </a>
+                   -->
+                   
+                   <button id="meter_check" disabled onclick="calculate_ind()" style="position: absolute;
+                   left:117px;
+                   top: 52px;
+                   border-width:2px;
+                   border-radius:8px;
+                   font-size:18px;
+                   padding:8px;
+                   color: white;
+                   font-weight: 1000;
+
+                   background-color: rgb(45, 77, 238);
+
+                   "
+                   > CHECK :  </button>
+                 
+
+                   <div  style="
+                  font-size: 1.5rem;
+                  font-family: 'Seven Segment' sans-serif;
+                  color: rgb(66, 8, 20);
+                  position: absolute;
+                  top: 7px;
+                  
+                  left: 223px;
+                ">
+                
+                  <strong>Deflection</strong>
+              
+                </div> 
+                  <!-- <span id="demo9" style="font-size: 1.5rem;
+                  font-family: 'Seven Segment' sans-serif;
+                  color: crimson;
+                  position: absolute;
+                  top: 51px;
+                  left: 1530px;
+                  "></span> -->
+                
+                </p>
+
+                <div
+              id="demo9"
+              style="
+                background-color: rgb(0, 0, 0);
+                width: 120px;
+                height: 50px;
+                font-size: 1.5rem;
+                text-align: center;
+                font-family: 'Seven Segment' sans-serif;
+                color: rgb(227, 22, 22);
+                border: inset 6px lightgray;
+                position: absolute;
+                top: 51px;
+                left: 228px;
+              "
+            >
+              <b>
+                <p
+                  id="digi"
+                  style="
+                    text-align: center;
+                    margin: 5px;
+                    font-size: 1.5rem;
+                    font-family: 'Seven Segment' sans-serif;
+                    color: rgb(227, 22, 22);
+                  "
+                >
+                  --.--
+                </p>
+              </b>
+            </div>
+            &nbsp;&nbsp;
+            <!-- <p
+              style="
+                font-size: 1.5rem;
+                font-family: 'Seven Segment' sans-serif;
+                color: crimson;
+                position: absolute;
+                top: 51px;
+                left: 358px;
+              "
+            >
+              <b>mA</b>
+            </p> -->
+
+        <!-- <div class="input11" id="input_data"></div>  -->
+
+                 <!-- <div id="data1" style="display: none;">10</div> 
+                 <input
+          type="text"
+          id="data1"
+          value="10"
+          style="display: none"
+        />
+
+                 <p value="10" id="data1" style="width:100px"></p>  -->
+                  <br>
+                  <br>
+                
+                
+                  <!-- <div style="display: flex; align-items: center; gap: 10px;"> -->
+                   <div  style="
+                   border:  2px solid rgb(170, 164, 164);
+                   padding : 8px;
+                   border-radius :6px;
+                   margin: 3px;
+                   position: absolute;
+                   top: 110px;
+                   font-size: 20px;
+                   left: 18px;
+                   background-color: c;
+                   ">
+
+                    <label
+                    >
+                    <strong>
+                    Enter R2 (in kΩ) : </strong></label
+                  >
+                    <input
+                    disabled
+                type="number"
+                id="data1"
+                onclick="calculate_ind()"
+                step="0.01"
+                value="0.1"
+                style="width: 90px; border-radius: 6px; height:40px; text-align: center; font-size:20px; "
+                required
+              >
+              
+                <input
+                      disabled
+                  class="form-control"
+                  type="range"
+                  min="0.1"
+                  max="20"
+                  value="0.1"
+                  onclick="calculate_ind()"
+                  oninput="this.previousElementSibling.value = this.value"
+                  step="0.1"
+                  style="width: 370px"
+                  id="myrange1"
+                />
+              </div>
+              <br><br><br><br><br><br>  
+              <!-- </div> -->
+               <br>
+               <div  style="
+                   border:  2px solid rgb(170, 164, 164);
+                   padding : 8px;
+                   border-radius :6px;
+                   margin: 3px;
+                   position: absolute;
+                   top: 212px;
+                   font-size: 20px;
+                   left: 18px;
+                   background-color: rgb(253, 253, 253);
+                   ">
+               <label
+               >
+               <strong>
+               Enter R3 (in kΩ) : </strong></label
+             >
+               <input
+               disabled
+           type="number"
+           id="data2"
+           onclick="calculate_ind()"
+           step="0.01"
+           value="0.1"
+           style="width: 90px; border-radius: 6px; height:40px; text-align: center; font-size:20px; "
+           required
+         >
+         
+           <input
+           disabled
+             class="form-control"
+             type="range"
+             min="0.1"
+             max="20"
+             value="0.1"
+             onclick="calculate_ind()"
+             oninput="this.previousElementSibling.value = this.value"
+             step="0.1"
+             style="width: 370px"
+             id="myrange2"
+           />
+                </div>
+                <br />
+                <br>
+                <div  style="
+                border:  2px solid rgb(170, 164, 164);
+                padding : 8px;
+                border-radius :6px;
+                margin: 3px;
+                position: absolute;
+                top: 314px;
+                font-size: 20px;
+                left: 18px;
+                background-color: rgb(253, 253, 253);
+                ">
+            <label 
+            >
+            <strong>
+            Enter C (in µF) : </strong></label
+          >
+            <input
+            disabled
+        type="number"
+        id="data3"
+        onclick="calculate_ind()"
+        step="0.01"
+        value="0.01"
+        max="0.1"
+        style="width: 90px; border-radius: 6px; height:40px; text-align: center; font-size:22px; "
+        required
+      >
+      
+        <input
+        disabled
+        class="form-control"
+        type="range"
+        min="0.01"
+        max="0.1"
+        step="0.01"
+        onclick="calculate_ind()"
+        value="0.01"
+        style="width: 370px"
+        id="myrange3"
+          oninput="this.previousElementSibling.value = this.value"
+         
+        />
+             </div>
+             <br><br><br> 
+             <!-- <label class="form-control"
+                  >Enter Capacitance: <span id="demo3"></span> µF</label
+                >
+                <input
+                  class="form-control"
+                  type="range"
+                  min="0.01"
+                  max="0.1"
+                  step="0.01"
+                  onclick="calculate_ind()"
+                  value="0.01"
+                  style="width: 390px"
+                  id="data3"
+                  style="width: 100px"
+                /><br /> -->
+              <div style="
+              position:absolute;
+              top: 430px;
+              font-size: 20px ; font-weight:bold;">
+                <label
+                  >Enter Volatge (in V) :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <input disabled  type="number" value="0" min="0" max="15" step="5" id="data4" style="width: 80px" />
+                </label>
+
+                <label
+                  >Enter Frequency (in Hz) :
+                  <input disabled type="number" disabled value="50" id="data5" style="width: 80px" />
+                </label>
+<br>  
+                
+                <label>Enter inductance value (in H) :
+                
+                <input
+                  disabled
+                  class="form-control"
+                  type="number"
+                  id="data6"
+                  style="width: 100px;
+                  position: absolute;
+                  left: 290px;
+                  top: 82px;
+                  "
+                  
+                />
+              </label>
+           
+                
+                <br>
+
+
+                <button
+                disabled
+                  class="btn btn-primary"
+                  id="btn1"
+                  onclick="check_value()"
+                >
+                  CHECK
+                </button>
+                &nbsp;
+                &nbsp;
+                <button disabled class="btn btn-primary" id="btn2" onclick="addRows()">
+                  Add to Table
+                </button>
+
+            
+                <!-- <input type="button" value="Print Report" onClick="window.print()" /> -->
+              </div>
+            </div>
+
+              <h3
+                style="
+                  position: relative;
+                  border: 2px solid black;
+                  width: 96%;
+                  text-align: center;
+                  background-color: #cb3535;
+                  color: white;
+                  border-radius: 6px;
+                  right: -32px;
+                  top: 618px;
+                "
+              >
+                Observation Table
+              </h3>
+
+              <table
+                id="myTable"
+                style="
+                  position: relative;
+                  top: 612px;
+                  border: 2px solid black !important;
+                  right: -32px;
+                  width: 96%;
+                  height: 50px;
+                  text-align: center;
+                "
+                class=""
+              >
+                <tr>
+                  <th>R1(&#8486;)</th>
+                  <th>R2(&#8486;)</th>
+                  <th>R3(&#8486;)</th>
+                  <th>R4(&#8486;)</th>
+                  <th>L (H)</th>
+                  <th>Volt(v)</th>
+                </tr>
+              </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <!-- <p>
+                <a
+                  href="javascript:void(0)"
+                  onclick="document.getElementById('light2').style.display='block';document.getElementById('fade').style.display='block'"
+                  ><b>Observations</b></a
+                >
+              </p>
+              <div id="light2" class="white_content">
+                <b>Observation Table</b><br />
+                <table id="myTable">
+                  <tr>
+                    <th>R1(kΩ)</th>
+                    <th>R2(kΩ)</th>
+                    <th>R3(kΩ)</th>
+                    <th>C(µF)</th>
+                    <th>L(Unknown)</th>
+                    <th>Volatge(Volt)</th>
+                    <th>Balanced</th>
+                  </tr>
+                </table>
+                <a
+                  href="javascript:void(0)"
+                  onclick="document.getElementById('light2').style.display='none';document.getElementById('fade').style.display='none'"
+                  >Close</a
+                >
+              </div>
+              <div id="fade" class="black_overlay"></div>
+
+              <p>
+                <a
+                  href="javascript:void(0)"
+                  onclick="document.getElementById('light1').style.display='block';document.getElementById('fade').style.display='block'"
+                  ><b>Formulae</b></a
+                >
+              </p>
+              <div id="light1" class="white_content">
+                <h4>Hays Bridge Experiment</h4>
+                <br /> -->
+                <!-- 
+            <div id="formulae">
+                <h5>At Balance codition:</h5>
+            <script type="math/asciimath"
+              id="MathJax-Element-7">(R_1+j*omega*L_1)*(R_4 - j/(omega*C_4) )=R_2*R_3 </script><br><br>
+            <h5>For inductor with high Quality factor:</h5>
+            <script type="math/asciimath" id="MathJax-Element-8">L=R_2*R_3*C </script><br><br>
+
+            </div> -->
+                <!-- 
+                <a
+                  href="javascript:void(0)"
+                  onclick="document.getElementById('light1').style.display='none';document.getElementById('fade').style.display='none'"
+                  >Close</a
+                >
+              </div>
+
+              <p>
+                <a
+                  href="javascript:void(0)"
+                  onclick="window.location.reload().style.display='block';document.getElementById('fade').style.display='block'"
+                  ><b>Reset</b></a
+                >
+              </p>
+              <div id="fade" class="black_overlay"></div> -->
+                <!-- <div id="mydiv">
+                <h5>Give Inputs:</h5>
+                <div class="input11" id="input_data"></div>
+                <label>Enter R2: <span id="demo1"></span> kΩ</label>
+                <input
+                  type="range"
+                  min="0.1"
+                  max="20"
+                  value="0.1"
+                  onclick="calculate_ind()"
+                  step="0.01"
+                  style="width: 300px"
+                  id="data1"
+                  style="width: 100px"
+                /><br />
+                <label>Enter R3: <span id="demo2"></span> kΩ</label>
+                <input
+                  type="range"
+                  min="0.1"
+                  max="20"
+                  value="0.1"
+                  onclick="calculate_ind()"
+                  step="0.01"
+                  style="width: 300px"
+                  id="data2"
+                  style="width: 100px"
+                /><br />
+                <label
+                  >Enter Capacitance value: <span id="demo3"></span> µF</label
+                >
+                <input
+                  type="range"
+                  min="0.01"
+                  max="0.1"
+                  step="0.01"
+                  onclick="calculate_ind()"
+                  value="0.01"
+                  style="width: 300px"
+                  id="data3"
+                  style="width: 100px"
+                /><br />
+                <label
+                  >Enter Volatge (in V):
+                  <input type="number" id="data4" style="width: 100px" />
+                </label>
+                <br />
+                <label
+                  >Enter Frequency (in Hz):
+                  <input type="number" id="data5" style="width: 100px" />
+                </label>
+                <br />
+
+                <p>
+                  Deflection in meter:
+                  <span id="demo9" style="color: rgb(228, 0, 0)"></span>
+                </p>
+                <label>Enter Calculated inductance value (in H) :</label>
+                <br />
+                <input type="number" id="data6" style="width: 100px" />
+
+                <button onclick="check_value()">check</button>
+                <br />
+                <br />
+                <button onclick="addRows()">submit</button>
+
+                <input
+                  type="button"
+                  value="Print Report"
+                  onClick="window.print()"
+                />
+              </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="script.js"></script>
+  
+    </div>
+  </body>
+</html>

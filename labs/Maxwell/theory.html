@@ -1,0 +1,297 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Virtual Labs </title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <!-- Bootstrap 3.3.6 -->
+        <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+        <script>
+            window.onload = function () {
+                document.getElementById("theory").className = "active treeview";
+            }
+        </script>
+        <style>
+          #toggle_nav:hover{
+            background-color: #1261A0;
+          }
+          #aim{
+            background-color: #009dff;
+          }
+          #aim:hover,#theory:hover,#pretest:hover,#procedure:hover,#simulation:hover,#result:hover,#posttest:hover,#references:hover{
+            background-color: #009dff;
+          }
+        </style>
+    </head>
+
+    <body class="hold-transition skin-blue sidebar-mini">
+        <!--Navigation Bar-->
+<div class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse" >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" ><span><img src="images/iitrLogo.png" style="margin-top:-15px;height:50px;width: 400px;"></span></a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+      
+    </div>
+  </div>
+</div>
+        
+        <div class="wrapper">
+        	<header class="main-header">
+        <!-- Logo -->
+        <a href="../index.html" class="logo" style="background-color:#009dff; border-right:solid;border-right-color: #1261A0;">
+        <p align="center" style="font-size:1em;"><b>Electrical Measurements Lab</b></p>
+    </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" style="background-color:#009dff;">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button" id="toggle_nav">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+          <section class="content-header">
+            <ol class="breadcrumb">
+              <li>
+                <a href="../index.html"><i class="fa fa-dashboard"></i>Electrical Measurements Lab</a>
+              </li>
+              <li>
+                <a href="#">Maxwell Bridge</a>
+              </li>
+              <li class="active">Theory</li>
+            </ol>
+          </section>
+        </nav>
+      </header>
+            
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar" style="background-color:#1261A0;">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- search form -->
+          <form action="#" method="get" class="sidebar-form">
+            <div class="input-group"></div>
+          </form>
+          <!-- /.sear ch form -->
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+            <ul class="sidebar-menu" style="background-color:#1261A0;">
+                <li class="treeview" id="aim">
+                    <a href="index.html" id="aim">
+                        <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Aim</span>
+
+                    </a>
+                </li>
+                <li class="treeview" id="theory">
+                    <a href="theory.html" id="theory" onclick="theory()">
+                        <i class="fa fa-files-o" style="color:white;"></i>
+                        <span style="color:white;">Theory</span>
+                    </a>
+                </li>
+             <!--   <li class="treeview" id="numerical">
+                    <a href="numerical.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Numerical</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+                <li class="treeview" id="program">
+                    <a href="program.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Program</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li> -->
+                <li class="treeview" id="pretest">
+                    <a href="pretest.html" id="pretest">
+                        <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Pre Test</span>
+
+                    </a>
+                </li>
+                
+                <li class="treeview" id="procedure">
+                    <a href="procedure.html" id="procedure">
+                        <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Procedure</span>
+                    </a>
+                </li>
+                <li class="treeview" id="simulation">
+                    <a href="simulation.html" id="simulation">
+                        <i class="fa fa-laptop" style="color:white;"></i>
+                        <span style="color:white;">Simulation</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+
+             
+                
+                <li class="treeview" id="posttest">
+                    <a href=" posttest.html" id="posttest">
+                        <i class=" fa fa-files-o" style="color:white;">
+                    </i>
+                    <span style="color:white;">Post Test</span>
+                    <span class="pull-right-container">
+                    </span>
+                    </a>
+                </li>
+                <li class="treeview" id="ref">
+                    <a href="references.html" id="references">
+                        <i class="fa fa-files-o" style="color:white;"></i>
+                        <span style="color:white;">References</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+   
+            <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+                <section class="content-header">
+                <h1 align="center">
+                    Maxwell Bridge <!-- Write experiment name here --> 
+                </h1>
+                </section>
+                    <!-- Main content -->
+                    <section class="content">
+                    <h3 style="margin-top:5%"> Theory </h3>
+                    <p style="font-size:130%; margin-top:2%">
+
+                    <!--Theory of experiment -->
+                    <h2>Introduction</h2>
+                    <p>A Maxwell bridge is a modification to a Wheatstone bridge used to measure an unknown inductance (usually of low Q value) in terms of calibrated resistance and inductance or resistance and capacitance. When the calibrated components are a parallel resistor and capacitor, the bridge is known as a Maxwell-Wien bridge. It is named for James C. Maxwell, who first described it in 1873.</p>
+                    <p>It uses the principle that the positive phase angle of an inductive impedance can be compensated by the negative phase angle of a capacitive impedance when put in the opposite arm and the circuit is at resonance; i.e., no potential difference across the detector (an AC voltmeter or ammeter)) and hence no current flowing through it. The unknown inductance then becomes known in terms of this capacitance.</p>
+                    
+                    <figure>
+                        <center>
+                        <img src="images/circuit.png" alt="Maxwell Bridge"  >
+                        <figcaption><strong>Fig. 1 Wheatstone Bridge</strong></figcaption>
+                    </center>
+                    </figure>
+                    
+                    <p>With reference to the picture, in a typical application R<sub>1</sub> and R<sub>4</sub> are known fixed entities, and R<sub>2</sub> and  C<sub>2</sub> are known variable entities. R<sub>2</sub> and  C<sub>2</sub> are adjusted until the bridge is balanced. R<sub>3</sub> and  L<sub>3</sub> can then be calculated based on the values of the other components</p>
+                    
+                    <h3>Types of Maxwell’s Bridge</h3>
+                    <p>Two methods are used for determining the self-inductance of the circuit. They are</p>
+                    <ol>
+                        <li>Maxwell’s Inductance Bridge</li>
+                        <li>Maxwell’s inductance Capacitance Bridge</li>
+                    </ol>
+                    
+                    <h3>Maxwell’s Inductance Bridge</h3>
+                    <p>In such type of bridges, the value of unknown resistance is determined by comparing it with the known value of the standard self-inductance. The connection diagram for the balance Maxwell bridge is shown in the figure below.</p>
+                    
+                    <center>
+                        <img src="images/circuit2.png" alt="Maxwell Inductance Bridge">
+                        <figcaption><strong>Fig. 2 Maxwell Inductance Bridge</strong></figcaption>
+                    </center>
+                    
+                    <p>Where, L1 – Unknown inductance of resistance R1.<br>
+                    L2 – Variable inductance of fixed resistance r2.<br>
+                    R2 – Variable resistance connected in series with inductor L2.<br>
+                    R3, R4 – Known non-inductance resistance.</p>
+                    
+                    <p>At balance,</p>
+                    \[ L_1 = \frac{R3}{R4}L2 \]
+                    \[ R1 = \frac{R3}{R4}(R2+r2) \]
+                    
+                    <p>The value of the R3 and R4 resistance varies from 10 to 1000 ohms with the help of the resistance box. Sometimes for balancing the bridge, the additional resistance is also inserted into the circuit. The phasor diagram of Maxwell’s inductance bridge is shown in the figure below.</p>
+                    
+                    <center>
+                        <img src="images/circuit3.jpg" alt="Phasor Diagram of Maxwell Inductance Bridge">
+                        <figcaption><strong>Fig. 3 Phasor Diagram of Maxwell Inductance Bridge</strong></figcaption>
+                    </center>
+                    
+                    <h3>Maxwell’s Inductance Capacitance Bridge</h3>
+                    <p>In this type of bridge, the unknown resistance is measured with the help of the standard variable capacitance. The connection diagram of the Maxwell Bridge is shown in the figure below.</p>
+                    
+                    <center>
+                        <img src="images/circuit4.png" alt="Maxwell Inductance Capacitance Bridge">
+                        <figcaption><strong>Fig. 4 Maxwell Inductance Capacitance Bridge</strong></figcaption>
+                    </center>
+                    
+                    <p>For balance condition,</p>
+                    \[ (R1 + jωL_1) \left (\frac{R4}{1 + jωC_4R_4} \right ) = R2R3 \]
+                    \[ R_1R_4 = jωL_1R_4 = R_2R_3 + jωC_4R_4R_2R_3 \]
+                    
+                    <p>By separating the real and imaginary equation we get,</p>
+                    \[ R_1 = \frac{R_2R_3}{R_4} \]
+                    \[ L_1 = R_2R_3C_4 \]
+                    
+                    <p>The above equation shows that the bridges have two variables R<sub>4</sub> and C<sub>4</sub> which appear in one of the two equations and hence both the equations are independent. The circuit quality factor is expressed as</p>
+                    \[ Q = \frac{ωL_1}{R_1} = ωC_4R_4 \]
+                    
+                    <p>Phasor diagram of Maxwell’s inductance capacitance bridge is shown in the figure below.</p>
+                    
+                    <center>
+                        <img src="images/circuit5.jpg" alt="Phasor Diagram of Maxwell Inductance Capacitance Bridge">
+                        <figcaption><strong>Fig. 5 Phasor Diagram of Maxwell Inductance Capacitance Bridge</strong></figcaption>
+                    </center>
+                    
+                    <h3>Advantages of the Maxwell’s Bridge:</h3>
+                    <p>The following are the advantages of the Maxwell bridge-</p>
+                    <ol>
+                        <li>The balance equation of the circuit is free from frequency.</li>
+                        <li>Both the balance equations are independent of each other.</li>
+                        <li>The Maxwell’s inductor capacitance bridge is used for the measurement of the high range inductance.</li>
+                    </ol>
+                    
+                    <h3>Disadvantages of the Maxwell’s Bridge:</h3>
+                    <p>The main disadvantages of the bridge are</p>
+                    <ol>
+                        <li>The Maxwell inductor capacitance bridge requires a variable capacitor which is very expensive. Thus, sometimes the standard variable capacitor is used in the bridges.</li>
+                        <li>The bridge is only used for the measurement of medium quality coils.</li>
+                    </ol>
+                    </div>
+
+                    </p>
+                </section>
+            <!-- /.content -->
+            </div>
+            <footer class="main-footer">
+                <h4 align="center">Lab contributed by IIT Roorkee<!-- Institute Name --> </h4>
+            </footer>
+        </div>
+        
+    </body>
+</html>
+<script>
+ function theory(){
+   document.getElementById("theory").style.backgroundColor = "#009dff";
+ 
+ }
+
+
+</script>
+<!-- ./wrapper -->
+<!-- jQuery 2.2.3 -->
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/app.min.js"></script>

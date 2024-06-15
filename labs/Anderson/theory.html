@@ -1,0 +1,271 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Virtual Labs </title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <!-- Bootstrap 3.3.6 -->
+        <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+        <script>
+            window.onload = function () {
+                document.getElementById("theory").className = "active treeview";
+            }
+        </script>
+        <style>
+          #toggle_nav:hover{
+            background-color: #1261A0;
+          }
+          #aim{
+            background-color: #009dff;
+          }
+          #aim:hover,#theory:hover,#pretest:hover,#procedure:hover,#simulation:hover,#result:hover,#posttest:hover,#references:hover{
+            background-color: #009dff;
+          }
+        </style>
+    </head>
+
+    <body class="hold-transition skin-blue sidebar-mini">
+        <!--Navigation Bar-->
+<div class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse" >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand"><span><img src="images/iitrLogo.png" style="margin-top:-15px;height:50px;width: 400px;"></span></a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+      
+    </div>
+  </div>
+</div>
+        
+        <div class="wrapper">
+        	<header class="main-header">
+        <!-- Logo -->
+        <a href="../index.html" class="logo" style="background-color:#009dff; border-right:solid;border-right-color: #1261A0;">
+        <p align="center" style="font-size:1em;"><b>Electrical Measurements Lab</b></p>
+    </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" style="background-color:#009dff;">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button" id="toggle_nav">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+          <section class="content-header">
+            <ol class="breadcrumb">
+              <li>
+                <a href="../index.html"><i class="fa fa-dashboard"></i>Electrical Measurements Lab</a>
+              </li>
+              <li>
+                <a href="#">Anderson Bridge</a>
+              </li>
+              <li class="active">Theory</li>
+            </ol>
+          </section>
+        </nav>
+      </header>
+            
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar" style="background-color:#1261A0;">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- search form -->
+          <form action="#" method="get" class="sidebar-form">
+            <div class="input-group"></div>
+          </form>
+          <!-- /.sear ch form -->
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+            <ul class="sidebar-menu" style="background-color:#1261A0;">
+                <li class="treeview" id="aim">
+                    <a href="index.html" id="aim">
+                        <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Aim</span>
+
+                    </a>
+                </li>
+                <li class="treeview" id="theory">
+                    <a href="theory.html" id="theory" onclick="theory()">
+                        <i class="fa fa-files-o" style="color:white;"></i>
+                        <span style="color:white;">Theory</span>
+                    </a>
+                </li>
+             <!--   <li class="treeview" id="numerical">
+                    <a href="numerical.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Numerical</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+                <li class="treeview" id="program">
+                    <a href="program.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Program</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li> -->
+                <li class="treeview" id="pretest">
+                    <a href="pretest.html" id="pretest">
+                        <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Pre Test</span>
+
+                    </a>
+                </li>
+                
+                <li class="treeview" id="procedure">
+                    <a href="procedure.html" id="procedure">
+                        <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Procedure</span>
+                    </a>
+                </li>
+                <li class="treeview" id="simulation">
+                    <a href="simulation.html" id="simulation">
+                        <i class="fa fa-laptop" style="color:white;"></i>
+                        <span style="color:white;">Simulation</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+
+             
+                
+                <li class="treeview" id="posttest">
+                    <a href=" posttest.html" id="posttest">
+                        <i class=" fa fa-files-o" style="color:white;">
+                    </i>
+                    <span style="color:white;">Post Test</span>
+                    <span class="pull-right-container">
+                    </span>
+                    </a>
+                </li>
+                <li class="treeview" id="ref">
+                    <a href="references.html" id="references">
+                        <i class="fa fa-files-o" style="color:white;"></i>
+                        <span style="color:white;">References</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+   
+            <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+                <section class="content-header">
+                <h1 align="center">
+                    Anderson Bridge<!-- Write experiment name here --> 
+                </h1>
+                </section>
+                    <!-- Main content -->
+                    <section class="content">
+                    <h3 style="margin-top:5%"> Theory </h3>
+                    <p style="font-size:130%; margin-top:2%">
+
+                    <!--Theory of experiment -->
+                    <p>The Anderson's bridge gives the accurate measurement of self-inductance of the circuit. The bridge is the advanced form of Maxwell's inductance capacitance bridge. In Anderson bridge, the unknown inductance is compared with the standard fixed capacitance which is connected between the two arms of the bridge.</p>
+
+                    <h3>Construction of Anderson's Bridge</h3>
+                    <p>The bridge has fours arms ab, bc, cd and ad. The arm ab consists unknown inductance along with the resistance. And the other three arms consist the purely resistive arms connected in series with the circuit.</p>
+                
+                    <center>
+                        <img src="images/circuit.png" alt="circuit" style="max-width: 100%;"/>
+                        <br><strong>Fig. 1 Anderson's Bridge</strong>
+                    </center>
+                
+                    <p>The static capacitor and the variable resistor are connected in series and placed in parallel with the cd arm. The voltage source is applied to the terminal a and c.</p>
+                
+                    <p>Let, \( L_1 \) – unknown inductance having a resistance \( R_1 \).<br>
+                    \( R_2 \), \( R_3 \), \( R_4 \) – known non-inductive resistance<br>
+                    \( C \) – standard capacitor</p>
+                
+                    <p>At balance Condition,</p>
+                    <center>
+                        \( I_1 = I_3 \)
+                    </center>
+                    <center>
+                        \( I_2 = I_C + I_4 \)
+                    </center>
+                    <p>Now,</p>
+                    <center>
+                        \( I_1 R_3 = I_C \times \frac{1}{j\omega C} \)
+                    </center>
+                    <center>
+                        \( I_C = I_1 j\omega CR_3 \)
+                    </center>
+                
+                    <!-- More equations and text here -->
+                
+                    <h3>Phasor Diagram of Anderson’s Bridge</h3>
+                
+                    <p>The phasor diagram of the Anderson bridge is shown in the figure below. The current \( I_1 \) and the \( E_3 \) are in phase and represented on the horizontal axis. When the bridge is in balance condition the voltage across the arm bc and ec are equal.</p>
+                
+                    <center>
+                        <img src="images/circuit2.png" alt="circuit2" style="max-width: 100%;"/>
+                        <br><strong>Fig. 2 Phasor Diagram of Anderson's Bridge</strong>
+                    </center>
+                
+                    <p>The current enters into the bridge is divided into the two parts \( I_1 \) and \( I_2 \). The \( I_1 \) is entered into the arm ab and causes the voltage drop \( I_1(R_1+R) \) which is in phase with the \( I_1 \). As the bridge is in the balanced condition, the same current is passed through the arms bc and ec.</p>
+                
+                    <!-- More text here -->
+                
+                    <h3>Advantages of Anderson's Bridge:</h3>
+                    <ol>
+                        <li>The balance point is easily obtained on the Anderson bridge as compared to Maxwell’s inductance capacitance bridge.</li>
+                        <li>The bridge uses fixed capacitor because of which accurate reading is obtained.</li>
+                        <li>The bridge measures the accurate capacitances in terms of inductances.</li>
+                    </ol>
+                
+                    <h3>Disadvantages of Anderson's Bridge:</h3>
+                    <ol>
+                        <li>The circuit has more arms which make it more complex as compared to Maxwell’s bridge.</li>
+                        <li>The equation of the bridge is also more complex.</li>
+                        <li>The bridge has an additional junction which arises the difficulty in shielding the bridge.</li>
+                    </ol>
+                    
+                    </p>
+                </section>
+            <!-- /.content -->
+            </div>
+            <footer class="main-footer">
+                <h4 align="center">Lab contributed by IIT Roorkee<!-- Institute Name --> </h4>
+            </footer>
+        </div>
+        
+    </body>
+</html>
+<script>
+ function theory(){
+   document.getElementById("theory").style.backgroundColor = "#009dff";
+ 
+ }
+
+
+</script>
+<!-- ./wrapper -->
+<!-- jQuery 2.2.3 -->
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/app.min.js"></script>

@@ -1,0 +1,361 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Virtual Labs </title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+  <script async="true" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"> </script>
+<script async="true" src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/MathJax.js?config=AM_CHTML"> </script>
+<script async="true" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"> </script>
+
+  <script>
+    window.onload = function () {
+      document.getElementById("theory").className = "active treeview";
+    }
+  </script>
+  <style>
+    #toggle_nav:hover {
+      background-color: #1261A0;
+    }
+
+    #aim {
+      background-color: #009dff;
+    }
+
+    #aim:hover,
+    #theory:hover,
+    #pretest:hover,
+    #procedure:hover,
+    #simulation:hover,
+    #result:hover,
+    #posttest:hover,
+    #references:hover {
+      background-color: #009dff;
+    }
+  </style>
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+  <!--Navigation Bar-->
+  <div class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand"><span><img src="images/iitrLogo.png"
+              style="margin-top:-15px;height:50px;width: 400px;"></span></a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <header class="main-header">
+      <!-- Logo -->
+      <a href="../index.html" class="logo"
+        style="background-color:#009dff; border-right:solid;border-right-color: #1261A0;">
+        <p align="center" style="font-size:1em;"><b>Electrical Measurements Lab</b></p>
+      </a>
+      <!-- Header Navbar: style can be found in header.less -->
+      <nav class="navbar navbar-static-top" style="background-color:#009dff;">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button" id="toggle_nav">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+        <section class="content-header">
+          <ol class="breadcrumb">
+            <li>
+              <a href="../index.html"><i class="fa fa-dashboard"></i>Electrical Measurements Lab</a>
+            </li>
+            <li>
+              <a href="#"> Wheatstone Bridge</a>
+            </li>
+            <li class="active">Theory</li>
+          </ol>
+        </section>
+      </nav>
+    </header>
+
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar" style="background-color:#1261A0;">
+      <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar">
+        <!-- search form -->
+        <form action="#" method="get" class="sidebar-form">
+          <div class="input-group"></div>
+        </form>
+        <!-- /.sear ch form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu" style="background-color:#1261A0;">
+          <li class="treeview" id="aim">
+            <a href="index.html" id="aim">
+              <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Aim</span>
+
+            </a>
+          </li>
+          <li class="treeview" id="theory">
+            <a href="theory.html" id="theory" onclick="theory()">
+              <i class="fa fa-files-o" style="color:white;"></i>
+              <span style="color:white;">Theory</span>
+            </a>
+          </li>
+          <!--   <li class="treeview" id="numerical">
+                    <a href="numerical.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Numerical</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+                <li class="treeview" id="program">
+                    <a href="program.php">
+                        <i class="fa fa-laptop"></i>
+                        <span>Program</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li> -->
+          <li class="treeview" id="pretest">
+            <a href="pretest.html" id="pretest">
+              <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Pre Test</span>
+
+            </a>
+          </li>
+
+          <li class="treeview" id="procedure">
+            <a href="procedure.html" id="procedure">
+              <i class="fa fa-files-o" style="color:white;"></i> <span style="color:white;">Procedure</span>
+            </a>
+          </li>
+          <li class="treeview" id="simulation">
+            <a href="simulation.html" id="simulation">
+              <i class="fa fa-laptop" style="color:white;"></i>
+              <span style="color:white;">Simulation</span>
+              <span class="pull-right-container">
+              </span>
+            </a>
+          </li>
+
+
+
+          <li class="treeview" id="posttest">
+            <a href=" posttest.html" id="posttest">
+              <i class=" fa fa-files-o" style="color:white;">
+              </i>
+              <span style="color:white;">Post Test</span>
+              <span class="pull-right-container">
+              </span>
+            </a>
+          </li>
+          <li class="treeview" id="ref">
+            <a href="references.html" id="references">
+              <i class="fa fa-files-o" style="color:white;"></i>
+              <span style="color:white;">References</span>
+              <span class="pull-right-container">
+              </span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!-- /.sidebar -->
+    </aside>
+
+
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1 align="center">
+          Wheatstone Bridge
+          <!-- Write experiment name here  -->
+        </h1>
+      </section>
+      <!-- Main content -->
+      <section class="content">
+        <h2 style="margin-top:5%"> Theory </h2>
+        <p style="font-size:130%; margin-top:2%">
+
+        <div>
+          <b></b>
+          <div style="text-align: justify; font-size: 18px;font-family: 'Nunito Sans',sans-serif;"> Wheatstone bridge
+            also known as the resistance bridge, calculates the unknown resistance by balancing two legs of the bridge
+            circuit. One leg includes the component of unknown resistance. Samuel Hunter Christie invented the
+            Wheatstone bridge in 1833, which Sir Charles Wheatstone later popularised in 1843.<br> The Wheatstone Bridge
+            Circuit comprises two known resistors, one unknown resistor and one variable resistor connected in the form
+            of a bridge. This bridge is very reliable as it gives accurate measurements.<br>
+            <br>
+            <h3>Construction of Wheatstone Bridge</h3>
+           
+            A Wheatstone bridge circuit consists of four arms of which two arms consist of known resistances while the
+            other two arms consist of an unknown resistance and a variable resistance. The circuit also consists of a
+            galvanometer and an electromotive force source. The emf source is attached between points a and c while the
+            galvanometer is connected between the points b and d. The current that flows through the galvanometer
+            depends on the potential difference across it.
+            <br>
+            <br>
+            <!-- <center>
+              Fig. 1 Wheatstone Bridge -->
+
+            <!-- </center> -->
+            <figure>
+              <center>
+              <img src="images/circuit.png" alt="Maxwell Bridge"  >
+              <figcaption><strong>Fig. 1 Maxwell Bridge</strong></figcaption>
+          </center>
+          </figure>
+
+            Principle of Wheatstone Bridge
+            The Wheatstone bridge works on the principle of null deflection, i.e. the ratio of their resistances are
+            equal and no current flows through the circuit. Under normal conditions, the bridge is in the unbalanced
+            condition when current flows through the galvanometer. The bridge is said to be in a balanced condition when
+            no current flows through the galvanometer. This condition can be achieved by adjusting the known resistance
+            and variable resistance.<br>
+            <br>  
+
+            <h3>Wheatstone Bridge Derivation</h3>
+            The current enters the galvanometer and divides into two equal magnitude currents as I1 and I2. The
+            following condition exists when the current through a galvanometer is zero,
+            <b>
+            <center>
+
+              ` I_1P = I_2R`......(1)
+              <br>
+              <br>
+              `I_(Bt) = frac((V)*(r1+r2+r3+r4))((r1+r3)(r2+r4))`
+              
+          
+            </center>
+          </b>
+
+            The currents in the bridge, in a balanced condition, are expressed as follows:
+            <b>
+            <center>
+
+               `I_1 = I_3 = frac(E)(P+Q)`
+
+            </center>
+
+            <center>
+
+                `I_2 = I_4 = \frac{E}{R+S}`
+<br>
+              `\frac{P}{P+Q} = \frac{R}{R+S}`
+
+            </center>
+            </b>
+
+            Here, E is the emf of the battery.
+
+            By substituting the value of I1 and I2 in equation (1), we get
+            <b>
+            <center>
+
+               `\frac{PE}{P+Q} = \frac{RE}{R+S}`
+
+            </center>
+
+            <center>
+              <p>`frac(P)(P+Q) = frac(R)(R+S)`</p>
+             
+            
+            </center>
+
+            <center>
+
+           `   P(R+S) = R(P+Q)`
+
+            </center>
+
+            <center>
+
+             ` PR + PS = PR + QR`
+
+            </center>
+
+            <center>
+
+             ` PS = QR..`.....(2)
+
+            </center>
+
+            <center>
+
+             ` R = \frac{P}{Q}*S`......(3)
+
+            </center>
+            </b>
+            Equation (2) shows the balanced condition of the bridge, while equation (3) determines the value of the
+            unknown resistance.<br>
+              <br>
+            Where, R is the unknown resistance, S is the standard arm of the bridge and P & Q are the ratio arm of the
+            bridge.
+
+            <h3>Applications of Wheatstone Bridge:</h3>
+            The Wheatstone bridge is used for the precise measurement of low resistance.
+
+            Wheatstone bridge along with operational amplifier is used to measure physical parameters such as
+            temperature, light and strain.
+
+            Quantities such as Impedance, Inductance and Capacitance can be measured using variations on the Wheatstone
+            bridge.
+
+          <h3>Limitations of Wheatstone Bridge:</h3>
+            1. For low resistance measurement, the resistance of the leads and contacts becomes significant and introduces
+            an error.
+            <br>
+            2. For high resistance measurement, the measurement presented by the bridge is so large that the galvanometer
+            is insensitive to imbalance.
+            <br>
+            3.The other drawback is the change in the resistance due to the heating effect of the current through the
+            resistance. Excessive current may even cause a permanent change in the value of resistance.
+
+            <div>
+            </div>
+            </p>
+      </section>
+      <!-- /.content -->
+    </div>
+    <footer class="main-footer">
+      <h4 align="center">Lab contributed by IIT Roorkee<!-- Institute Name --> </h4>
+    </footer>
+  </div>
+
+</body>
+
+</html>
+<script>
+  function theory() {
+    document.getElementById("theory").style.backgroundColor = "#009dff";
+
+  }
+
+
+</script>
+<!-- ./wrapper -->
+<!-- jQuery 2.2.3 -->
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/app.min.js"></script>
