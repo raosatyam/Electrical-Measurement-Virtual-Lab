@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_Aim"
+        android:title="Aim"/>
+
+    <item
+        android:id="@+id/nav_Theory"
+        android:title="Theory"/>
+
+    <item
+        android:id="@+id/nav_PreTest"
+        android:title="Pre Test"/>
+
+    <item
+        android:id="@+id/nav_Procedure"
+        android:title="Procedure"/>
+
+    <item
+        android:id="@+id/nav_Simulation"
+        android:title="Simulation"/>
+
+<!--    <item-->
+<!--        android:id="@+id/nav_Result"-->
+<!--        android:title="Result"/>-->
+
+    <item
+        android:id="@+id/nav_PostTest"
+        android:title="Post Test"/>
+
+    <item
+        android:id="@+id/nav_References"
+        android:title="References"/>
+</menu>

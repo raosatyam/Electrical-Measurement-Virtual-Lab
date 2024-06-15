@@ -1,0 +1,82 @@
+[
+    {
+        "title": "Wheatstone Bridge",
+        "aimText": "To study and perform an experiment to measure the unknown Resistance by Wheatstone’s bridge.",
+        "requirementsText": "Light Spot DC Galvanometer, Various Medium Resistors, Multimeter, Portable Wheatstone bridge.",
+        "theoryText1": "A bridge circuit in its simplest form consists of network of four resistance arms forming a closed circuit, with a dc source of current applied to two opposite junctions and a current detector connected to the other two junctions.\n\nWheatstone's bridge is used for accurate measurement of resistance. The circuit diagram of a typical Wheatstone's bridge is given in fig. 1.1.",
+        "imageUrl": "@drawable/wheatstone_bridge1",
+        "theoryText2": "When SW1 is closed, current flows and divides into the two arms at point A, i.e. I1 and I2. The bridge is balanced when there is no current through the galvanometer, or when the potential difference at points C and D is equal, i.e. the potential across the galvanometer is zero.\n\nTo obtain the bridge balance equation, we have from the fig. 1.1,\n\n  I1 * R1 = I2 * R2  ----------------------------------    (1.1) \n\nFor the galvanometer current to be zero, the following conditions should be satisfied.\n\n I1 = I3 = E/(R1 + R3) \n I2 = I4 = E/(R2 + R4) \n\nSubstituting in Eq. (1.1) \n\n (E * R1)/(R1 + R3) = (E * R2)/(R2 + R4) \n\n R4 = (R2 * R3)/R1 \n\nThis is the equation for bridge to be balanced.",
+        "precautionsText": "1. Calibration and Balancing: Accurate measurements require regular calibration, with high-quality resistors, to balance the bridge. Ensure a null point (zero current) for precise readings. \n\n2. Stable Power Supply: Use a consistent and regulated power source to prevent voltage fluctuations, which can impact the accuracy of resistance measurements. \n\n3. Minimize Thermal Effects: Temperature changes affect resistance values. Allow components to reach thermal equilibrium and maintain a stable measurement environment to reduce errors.",
+        "simulator": "https://shivamchs.github.io/Wheatstone/"
+    },
+    {
+        "title": "Maxwell_Bridge",
+        "aimText": "To Measure the unknown value of Inductance using a Maxwell Bridge.",
+        "requirementsText": "Maxwell Inductance Bridge Kit, Headphone or null detector, multimeter.",
+        "theoryText1": "The Maxwell’s bridge is used an inductance is measured by comparison with  a standard variable capacitance. One of the ratio arms has a résistance and the capacitance in the parallel.\n",
+        "imageUrl": "@drawable/maxwell_bridge1",
+        "theoryText2": "In this bridge at the balance in condition there is no current is flow in the galvanometer. Hence, the balance equation for the bridge using the admittance of the arm 1 instead of the impedance.\n\nLet L2 be the inductance whose value is to be determined, r is a series resistance representing the loss in the inductance L1, R3, R4 are non-inductive resistances, and L1 is a fixed inductance.\n\nAt the balance condition,\n\nZ1*Z4 = Z2*Z3:R3*(R2 + jw*L1) = R4*(jw*L2)*R_2\n\nSolving for L2: \n\njw*L2*R2*R3 + jw*L1*R2*R3 = R4*R2*R3\n\njw*L2*R2 = R4*R2 - jw*L1*R2\n\njw*L2 = R4 - jw*L1\n\nL2 = R4/w - L1/w\n\nThis provides a relationship for determining the unknown inductance L2 using the given method.",
+        "precautionsText":"1. Connections should be properly done.\n2. The source used should be appropriate.\n3. The connecting wires should be used properly making sure that they are in good condition.\n",
+        "simulator":"https://raosatyam.github.io/Maxwell_Bridge/"
+    },
+    {
+        "title": "Owen's Bridge",
+        "aimText": "To determine the inductance of an unknown inductor.",
+        "requirementsText": "Owen's bridge trainer kit, Headphone or null detector, multimeter.",
+        "theoryText1": "Owen's Bridge is an electrical circuit used to measure the inductance and resistance of an inductor. Similar to the Schering Bridge, Owen's Bridge compares an unknown inductor with known resistors and a variable capacitor. The bridge is particularly effective for measuring medium-quality factor inductors and is sensitive to frequency variations. It operates by balancing the bridge circuit, where the unknown inductor's inductance is determined based on the known values of the other components.",
+        "imageUrl": "@drawable/owens_bridge1",
+        "theoryText2": "A balance detector or null indicator is connected across two junctions of the bridge. When the bridge is balanced, the indicator shows no deflection. Let L1 be the unknown inductor with resistance R1, R2 and R3 be known non-inductive resistances, and C be a known variable capacitor.\n\nAt balance, the relationship is given by:\n\n(R1+jω*L1)/jω*C4 = (R2+1/(1+jω*C2))*R3 ----- (1)\n\nBy equating the real and imaginary parts, we get the values of\nL1=R2*R3*C4 ------ (2)\nR1=R3*C4/C2 ------ (3)\n",
+        "precautionsText": "1. Ensure all connections are secure and properly made.\n2. Use a stable and appropriate AC source for the measurements.\n3. Check all wires and components for defects and ensure they are in good working condition.",
+        "simulator": "https://tiwarianjani.github.io/owens-bridge-simulation/"
+    },
+    {
+        "title": "Schering Bridge",
+        "aimText": "To determine the capacitance of an unknown capacitor.",
+        "requirementsText": "Schering bridge trainer kit, Headphone or null detector, multimeter.",
+        "theoryText1": "The Schering Bridge is a widely used ac electrical circuit for accurately measuring the capacitance and dissipation factor of capacitors. This bridge is capable of handling high voltage measurements. However, it is important to note that the accuracy of the Schering Bridge is sensitive to frequency variations. The bridge operates by comparing the unknown capacitor with a known standard capacitor.",
+        "imageUrl": "@drawable/schering_bridge1",
+        "theoryText2": "A balance detector or null indicator is connected across two junctions of the bridge. When the bridge is balanced, the indicator shows no deflection, indicating that the potentials at the junctions are equal. Let C1 be the unknown capacitor whose value is to be measured, R1 be the series resistance representing the loss in C1, C2 be a standard capacitor with negligible loss, and R2 and R3 be non-inductive resistances. At balance, the relationship is given by:\n\n(R1+(1/jωC1))*(R4/(1+jω*C4*R4)) = (1/jωC2)*R3 -------- (1)\n\nR1*R3+(R3/jω*C1) = (R2/jω*C2) --------- (2) \n\nBy equating the real and imaginary parts, we get:\n\nR1*R4-(jR4/ωC1) = ((R3*R4*C4)/C2)-(jR3/ωC2)\n\nR1 = R3*C4/C2\nand C1 = C2*R3/R2",
+        "precautionsText": "1. Ensure all connections are properly and securely made.\n2. Use an appropriate and stable AC source for the measurements.\n3. Inspect all connecting wires and components to ensure they are in good condition and free from defects.",
+        "simulator": "https://tiwarianjani.github.io/scaring-bridge/"
+    },
+    {
+        "title": "Wien Series Bridge",
+        "aimText": "To determine the capacitance of an unknown capacitor.",
+        "requirementsText": "Wien bridge trainer kit, Headphone or null detector, multimeter.",
+        "theoryText1": "The Wien's bridge is an ac electrical circuit widely used for measuring frequency and capacitance with high accuracy. The bridge can be used even at high voltages but the circuit is sensitive to frequency. The Wien bridge has a series combination of R-C\n",
+        "imageUrl": "@drawable/wiens_series1",
+        "theoryText2": "A balance detector or null indicator is connected across two junctions (i.e., across BD as shown above). The indicator shows null deflection when the bridge is balanced i.e. when the junctions B and D will be at the same potential.\n\nLet,\nC1= Capacitor whose capacitance is to be measured,\nR1= A series resistance representing the loss in the capacitor C1,\nC4= A standard capacitance with series resistance of R4,\nR2 and R3= Non-inductive resistances.\n\nAt balance,\n(R1+(1/jω*C1))*R3 = (R4+(1/jω*C4))*R2 -------- (1)\n\nR1*R3+(R3/jω*C1) = R2*R4+(R2/jω*C4) -------- (2)\n\nEquating the real and imaginary terms,\nR1*R3 = R2*R4\nR1 = R2*R4/R3\nand, R3/jω*C1 = R2/jω*C4\nC1 = C4*R3/R2",
+        "precautionsText":"1. Connections should be properly done.\n2. The source used should be appropriate.\n3. The connecting wires should be used properly making sure that they are in good condition.",
+        "simulator":"https://shivamchs.github.io/Wiens-Series/"
+    },
+    {
+        "title": "Anderson Bridge",
+        "aimText": "To determine the self inductance of the coil (L) using Anderson’s bridge.",
+        "requirementsText": "Apparatus required are resistance boxes, capacitor, headphone, signal generator, inductance coil and connection wire.",
+        "theoryText1": "AC bridges are often used to measure the value of unknown impedance (self/mutual inductance of inductors or capacitance of capacitors accurately). A large number of AC bridges are available and Anderson's Bridge is an AC bridge used to measure self inductance of the coil. It is a modification of Wheatstones Bridge. It enables us to measure the inductance of a coil using capacitor and resistors and does not require repeated balancing of the bridge.\n",
+        "imageUrl": "@drawable/anderson_bridge1",
+        "theoryText2": "The bridge is balanced by a steady current by replacing the headphone H by moving coil galvanometer and AC source by a battery. This is done by adjusting the variable resistance, r. After a steady balance has been obtained, inductive balance is obtained by using the AC source and headphone.\n\nTo measure the unknown inductance (having some resistance) by using standard capacitance:\n\nEquivalent Impedance:\nz1 = l1 + r1 + r3,\nz2 = r2 + (r4 * (r5+c1)) / (r5+r4+c1),\nZ_(eq) = (z1 * z2) / (z1 + z2)\n\nCurrent Through the battery is: I_(Bt) = V / Z_(eq)\n\nIf Bridge is Balanced, Voltage difference between galvanometer terminals is 0 and Current through the galvanometer is 0.\n\nConditions for Balance: \nr = (r2 * r3) / r4 - r1,\nl = (c1 * r3) / r4 * (r2 * r4 + r5 * (r2 + r4))",
+        "precautionsText":"1. To avoid inductive effect short straight wires should be used.\n2. Movement in galvanometer should be free.\n3. The resistances should be high and non-inductive.",
+        "simulator":"https://raosatyam.github.io/Andersion_Bridge/"
+    },
+    {
+        "title": "Wien Robinson Bridge",
+        "aimText": "To determine frequency of signal generator by employing the Wien Robinson's bridge.",
+        "requirementsText": "Wien bridge trainer kit, Headphone or null detector, multimeter.",
+        "theoryText1": "The Wien's bridge is an ac electrical circuit widely used for measuring frequency and capacitance with high accuracy. The bridge can be used even at high voltages but the circuit is sensitive to frequency. The Wien Robinson bridge has a series and parallel combination of R-C.",
+        "imageUrl": "@drawable/wien_robinson_bridge1",
+        "theoryText2": "A balance detector or null indicator is connected across two junctions (i.e., across BD as shown above). The indicator shows null deflection when the bridge is balanced i.e. when the junctions B and D will be at the same potential.\n\nLet, C1 = Capacitor connected in parallel to Resistance,\nR1 = A resistance connected in parallel with capacitor C1,\nC2 = A standard capacitance with series resistance of R2,\nR2 and R3 = Non-inductive resistances.\n\nIt is ratio real type bridge, for balance we have,\n\n(R1/(1+jωC1R1))∗R4 = (R2−(j/ωC2))∗R3\n\nR4/R3=R2/R1+C1/C2+j(ωC1R1−(1/C2*R2)) ----- (1)\n\nEquating real and imaginary parts of eq.(1), we have\nR4/R3 = R2/R1+C1/C2 ----- (2)\nand, ω = 1/√(R1*R2*C1*C2) ----- (3)\nthen, f = 1/2π√(R1*R2*C1*C2)\n",
+        "precautionsText":"1. Connections should be properly done.\n2. The source used should be appropriate.\n3. The connecting wires should be used properly making sure that they are in good condition.",
+        "simulator":"https://shivamchs.github.io/Wien-Robinson-s-bridge/"
+    },
+    {
+        "title": "Hay's Bridge/",
+        "aimText": "To Measure the unknown value of Inductor with a high Q factor using a Hay's Bridge.",
+        "requirementsText": "Hay'sBridge Kit, Headphoen or null detector, multimeter",
+        "theoryText1": "The Hay’s bridge is used for determining the self-inductance of the circuit. The bridge is the advanced form of Maxwell’s bridge.\n",
+        "imageUrl": "@drawable/hays_bridge",
+        "theoryText2": "In Hay’s bridge, the capacitor is connected in series with the resistance, the voltage drop across the capacitance and resistance are varied.\n Let L be the inductance whose value is to be determined,R_1, R_2 and R3 be the variable resistance, C be the variable capacitance.\nAt the balance condition, (R_1 + jwL1)*(R_4 - j/w.C_4) = R_2*R_3 \n For inductor with high Quality Factor, L = R_2 * R3 *C. \nThis provides a relationship for determining the unknown inductance L_2 using the given method.\n",
+        "precautionsText":"1. Connections should be properly done\n2. The source used should be appropriate\n3. The connecting wires should be used properly making sure that they are in good condition\n",
+        "simulator":"https://raosatyam.github.io/Hay-s-Bridge/"
+    }
+]

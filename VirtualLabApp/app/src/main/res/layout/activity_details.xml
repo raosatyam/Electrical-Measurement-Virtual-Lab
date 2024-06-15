@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/aim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Aim:"
+                android:paddingHorizontal="16dp"
+                android:textSize="16dp"
+                android:textColor="#000"
+                android:paddingVertical="6dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/aim_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                app:layout_constraintTop_toBottomOf="@id/aim"
+                android:text="To study and perform an experiment to measure the unknown Resistance by Wheatstone’s bridge."
+                android:paddingHorizontal="16dp"
+                android:textSize="16dp"
+                android:textColor="#333"
+                />
+
+            <TextView
+                android:id="@+id/requirements"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/aim_text"
+                android:text="Requirements:"
+                android:paddingHorizontal="16dp"
+                android:textSize="16dp"
+                android:textColor="#000"
+                android:paddingVertical="6dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/requirements_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                app:layout_constraintTop_toBottomOf="@id/requirements"
+                android:text="Light Spot DC Galvanometer, Various Medium Resistors, Multimeter, Portable Wheatstone bridge."
+                android:paddingHorizontal="16dp"
+                android:textSize="16dp"
+                android:textColor="#333"
+                />
+
+            <TextView
+                android:id="@+id/theory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/requirements_text"
+                android:text="Theory:"
+                android:paddingHorizontal="16dp"
+                android:textSize="16dp"
+                android:textColor="#000"
+                android:paddingVertical="6dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/theory1_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                app:layout_constraintTop_toBottomOf="@id/theory"
+                android:text="A bridge circuit in its simplest form consists of network of four resistance arms forming a closed circuit, with a dc source of current applied to two opposite junctions and a current detector connected to the other two junctions.\n\nWheatstone's bridge is used for accurate measurement of resistance. The circuit diagram of a typical Wheatstone's bridge is given in fig. 1.1."
+                android:paddingHorizontal="16dp"
+                android:textSize="16dp"
+                android:textColor="#333"
+                />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="350dp"
+                app:srcCompat="@drawable/wheatstone_bridge1"
+                app:layout_constraintTop_toBottomOf="@+id/theory_text"
+                app:layout_constraintStart_toStartOf="@+id/theory_text"
+                android:paddingVertical="10dp"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/theory2_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                app:layout_constraintTop_toBottomOf="@id/imageView"
+                android:text="When SW1 is closed, current flows and divides into the two arms at point A, i.e. I1 and I2. The bridge is balanced when there is no current through the galvanometer, or when the potential difference at points C and D is equal, i.e. the potential across the galvanometer is zero.\n\nTo obtain the bridge balance equation, we have from the fig. 1.1,\n\n  I1 * R1 = I2 * R2  ----------------------------------    (1.1) \n\nFor the galvanometer current to be zero, the following conditions should be satisfied.\n\n I1 = I3 = E/(R1 + R3) \n I2 = I4 = E/(R2 + R4) \n\nSubstituting in Eq. (1.1) \n\n (E * R1)/(R1 + R3) = (E * R2)/(R2 + R4) \n\n R4 = (R2 * R3)/R1 \n\nThis is the equation for bridge to be balanced."
+                android:paddingHorizontal="16dp"
+                android:textSize="16dp"
+                android:textColor="#333"
+                />
+
+            <TextView
+                android:id="@+id/precautions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/theory2_text"
+                android:text="Precautions:"
+                android:paddingHorizontal="16dp"
+                android:textSize="16dp"
+                android:textColor="#000"
+                android:paddingVertical="6dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/precautions_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                app:layout_constraintTop_toBottomOf="@id/precautions"
+                android:text="1. Calibration and Balancing: Accurate measurements require regular calibration, with high-quality resistors, to balance the bridge. Ensure a null point (zero current) for precise readings. \n\n2. Stable Power Supply: Use a consistent and regulated power source to prevent voltage fluctuations, which can impact the accuracy of resistance measurements. \n\n3. Minimize Thermal Effects: Temperature changes affect resistance values. Allow components to reach thermal equilibrium and maintain a stable measurement environment to reduce errors."
+                android:paddingHorizontal="16dp"
+                android:textSize="16dp"
+                android:textColor="#333"
+                />
+
+            <TextView
+                android:id="@+id/simulation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/precautions_text"
+                android:text="Simulation:"
+                android:paddingHorizontal="16dp"
+                android:textSize="16dp"
+                android:textColor="#000"
+                android:paddingVertical="6dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                />
+            <Button
+                android:id="@+id/simulatorBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:textColor="#ffffff"
+                android:text="Simulator"
+                app:layout_constraintTop_toBottomOf="@+id/precautions_text"
+                />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,1041 @@
+[
+  {
+    "title": "Wheatstone Bridge",
+    "aim": "To study and perform an experiment to measure the unknown resistance by Wheatstone’s Bridge.",
+    "theory": {
+      "prev": "A bridge circuit in its simplest form consists of network of four resistance arms forming a closed circuit, with a dc source of current applied to two opposite junctions and a current detector connected to the other two junctions.\n\nWheatstone's bridge is used for accurate measurement of resistance. The circuit diagram of a typical Wheatstone's bridge is given in fig. 1.1.",
+      "image": "@drawable/wheatstone_bridge1",
+      "next": "When SW1 is closed, current flows and divides into the two arms at point A, i.e. I1 and I2. The bridge is balanced when there is no current through the galvanometer, or when the potential difference at points C and D is equal, i.e. the potential across the galvanometer is zero.\n\nTo obtain the bridge balance equation, we have from the fig. 1.1,\n\n  I1 * R1 = I2 * R2  ----------------------------------    (1.1) \n\nFor the galvanometer current to be zero, the following conditions should be satisfied.\n\n I1 = I3 = E/(R1 + R3) \n I2 = I4 = E/(R2 + R4) \n\nSubstituting in Eq. (1.1) \n\n (E * R1)/(R1 + R3) = (E * R2)/(R2 + R4) \n\n R4 = (R2 * R3)/R1 \n\nThis is the equation for bridge to be balanced."
+    },
+    "procedure": [
+      "STEP 1: Pick up four resistances, a battery and a galvanometer from the Components.",
+      "STEP 2: Connect the resistances and the battery as shown in the figure to form a wheatstone bridge.",
+      "STEP 3: Click on check circuit button to check the connections.",
+      "STEP 4: Now Enter the fixed ratio of R1/R2, value of voltage and choose appropriate value of R3 through slider and click on the \"Submit\"button.",
+      "STEP 5: Repeat the experiment untill the bridge gets balanced."
+    ],
+    "simulator": "https://shivamchs.github.io/Wheatstone/",
+    "result": "Results",
+    "pretest": [
+      {
+        "question": "Wheatstone bridge is a _________.",
+        "answers": {
+          "a": "a.c. bridge",
+          "b": "d.c. bridge",
+          "c": "high voltage bridge",
+          "d": "power dissipation bridge"
+        },
+        "correctAnswer": "b"
+      },
+      {
+        "question": "Wheatstone bridge is used to measure resistance in the range of _______.",
+        "answers": {
+          "a": "1Ω to a few megaohms",
+          "b": "10kΩ to a few megaohms",
+          "c": "100MΩ to a few gegaohms",
+          "d": "100Ω to a few teraohms"
+        },
+        "correctAnswer": "a"
+      },
+      {
+        "question": "Wheatstone bridge is used to measure the d.c. resistance of various types of wires for _________.",
+        "answers": {
+          "a": "determining their effective resistance",
+          "b": "computing the power dissipation",
+          "c": "quality control of wire",
+          "d": "maintaining a source of constant e.m.f"
+        },
+        "correctAnswer": "c"
+      },
+      {
+        "question": "Telephone companies make use of the Wheatstone bridge for _________.",
+        "answers": {
+          "a": "measuring the telephone resistance",
+          "b": "computing the line strength",
+          "c": "maintaining dialtone",
+          "d": "locating the cable faults"
+        },
+        "correctAnswer": "d"
+      },
+      {
+        "question": "The opposite two ends of a Wheatstone bridge consist of _______.",
+        "answers": {
+          "a": "e.m.f and null detector",
+          "b": "Voltage and current source",
+          "c": "resistance and capacitance",
+          "d": "inductance and impedance"
+        },
+        "correctAnswer": "a"
+      }
+    ],
+    "posttest": [
+      {
+        "question": "How can a Wheatstone bridge be used for the measurement of physical parameters?",
+        "answers": {
+          "a": "in conjunction with a rectifier",
+          "b": "along with an op amp",
+          "c": "by connecting it to a thermistor",
+          "d": "by making use of a transducer"
+        },
+        "correctAnswer": "d"
+      },
+      {
+        "question": "By using the variations on a Wheatstone bridge we can _________.",
+        "answers": {
+          "a": "measure quantities such as voltage, current and power",
+          "b": "measure high resistance values",
+          "c": "measure quantities such as complex power",
+          "d": "measure quantities such as capacitance, inductance and impedance"
+        },
+        "correctAnswer": "b"
+      },
+      {
+        "question": "One of the simplest applications of a Wheatstone bridge is _________.",
+        "answers": {
+          "a": "voltage measurement",
+          "b": "current measurement",
+          "c": "light measurement",
+          "d": "power measurement"
+        },
+        "correctAnswer": "a"
+      },
+      {
+        "question": "Thermal compensation can be provided in a Wheatstone bridge by _________.",
+        "answers": {
+          "a": "using more than one resistive sensor",
+          "b": "making use of a heat sink",
+          "c": "medium resistance",
+          "d": "immersing the circuit into a liquid"
+        },
+        "correctAnswer": "a"
+      },
+      {
+        "question": "Wheatstone bridge consists of _________.",
+        "answers": {
+          "a": "4 resistive arms",
+          "b": "2 resistive arms",
+          "c": "6 resistive arms",
+          "d": "8 resistive arms"
+        },
+        "correctAnswer": "b"
+      }
+    ],
+    "references": [
+      "U.A. Bakshi, A.V. Bakshi, K.A. Bakshi, \"Electrical Measurements\", Technical Publications, First Edition, 2008",
+      "J.B. Gupta, \"A Course in Electrical and Electronic Measurements & Instrumentation\", S.K. Kataria & Sons, Fourteenth Edition, 2014",
+      "H.S. Kalsi, \"Electronic Instrumentation and Measurements\", Vol. 2, McGraw-Hill, Fourth Edition, 2019",
+      "A.K. Sawhney, \"A Course in Electrical and Electronic Measurements and Instrumentation\", Dhanpat Rai & Co., 2021"
+    ]
+  },
+  {
+    "title": "Maxwell Bridge",
+    "aim": "Measurement of unknown inductance using a Maxwell's Bridge.",
+    "theory": {
+      "prev": "The Maxwell’s bridge is used an inductance is measured by comparison with  a standard variable capacitance. One of the ratio arms has a résistance and the capacitance in the parallel.\n",
+      "image": "@drawable/maxwell_bridge1",
+      "next": "In this bridge at the balance in condition there is no current is flow in the galvanometer. Hence, the balance equation for the bridge using the admittance of the arm 1 instead of the impedance.\n\nLet L2 be the inductance whose value is to be determined, r is a series resistance representing the loss in the inductance L1, R3, R4 are non-inductive resistances, and L1 is a fixed inductance.\n\nAt the balance condition,\n\nZ1*Z4 = Z2*Z3:R3*(R2 + jw*L1) = R4*(jw*L2)*R_2\n\nSolving for L2: \n\njw*L2*R2*R3 + jw*L1*R2*R3 = R4*R2*R3\n\njw*L2*R2 = R4*R2 - jw*L1*R2\n\njw*L2 = R4 - jw*L1\n\nL2 = R4/w - L1/w\n\nThis provides a relationship for determining the unknown inductance L2 using the given method."
+    },
+    "procedure": [
+      "Step 1. Pick up four resistances, two inductors and a AC voltage source from the toolbox.",
+      "Step 2.Connect the elements as shown in the figure to form Maxwell Bridge.",
+      "Step 3.After making the circuit click on check circuit button to check the connections.",
+      "Step 4.Now Enter the the value of R2, R3, Volatge and Frequency and try to make deflection in meter close to zero.",
+      "Step 5.Calculate the value of inductance using the formula given and check the value using the check button.",
+      "Step 6.Enter the value untill the bridge gets balanced.",
+      "Step 7.Click on submit button to add it into observation table.",
+      "Step 8.Repeat the Experiment for new generated value of inductance.",
+      "PS. You can also try to listen the detector sound."
+    ],
+    "simulator": "https://raosatyam.github.io/Maxwell_Bridge/",
+    "result": "Results",
+    "pretest": [
+      {
+        "question": "Maxwell inductance capacitance bridge can be used for _________.",
+        "answers": {
+          "a": "measurement of inductance",
+          "b": "measurement of capacitance and inductance",
+          "c": "measurement of resistance",
+          "d": "measurement of voltage and current"
+        },
+        "correctAnswer": "b"
+      },
+      {
+        "question": "Balance equation for computing the unknown resistance is?",
+        "answers": {
+          "a": "R1 = R2/R1",
+          "b": "R1 = R2*R3/R4",
+          "c": "R1 = R3/R1",
+          "d": "R1 = 1/R1"
+        },
+        "correctAnswer": "b"
+      },
+      {
+        "question": "Balance equation for computing the value of the unknown inductance is?",
+        "answers": {
+          "a": "L1 = R2*R3",
+          "b": "L1 = R2*C4",
+          "c": "L1 = R2*R3*C4",
+          "d": "L1 = R3*C4"
+        },
+        "correctAnswer": "c"
+      },
+      {
+        "question": "Quality factor of the circuit is given by _________.",
+        "answers": {
+          "a": "Q = ωC1",
+          "b": "Q = ωR1",
+          "c": "Q = ω",
+          "d": "Q = ωR4*C4"
+        },
+        "correctAnswer": "d"
+      },
+      {
+        "question": "What is the significance of capacitors in a Maxwell bridge?",
+        "answers": {
+          "a": "they are used to block dc",
+          "b": "they are used to block ac",
+          "c": "they are cheap",
+          "d": "they are expensive"
+        },
+        "correctAnswer": "b"
+      }
+    ],
+    "posttest": [
+      {
+        "question": "The bridge balance equation can be written in _________.",
+        "answers": {
+          "a": "impedance form",
+          "b": "resistance form",
+          "c": "conductance form",
+          "d": "admittance form"
+        },
+        "correctAnswer": "a"
+      },
+      {
+        "question": "Maxwell inductance capacitance bridge can be used for _________.",
+        "answers": {
+          "a": "measurement of inductance",
+          "b": "measurement of capacitance and inductance",
+          "c": "measurement of resistance",
+          "d": "measurement of voltage and current"
+        },
+        "correctAnswer": "b"
+      },
+      {
+        "question": "Standard inductor provides rated inductance directly.",
+        "answers": {
+          "a": "True",
+          "b": "False"
+        },
+        "correctAnswer": "a"
+      },
+      {
+        "question": "Standard inductor requires no shielding.",
+        "answers": {
+          "a": "True",
+          "b": "False"
+        },
+        "correctAnswer": "b"
+      },
+      {
+        "question": "Maxwell bridge can be used for measurement of inductance with?",
+        "answers": {
+          "a": "High Q factor",
+          "b": "Very low Q factor",
+          "c": "Medium Q factor",
+          "d": "None of the above"
+        },
+        "correctAnswer": "a"
+      }
+    ],
+    "references": [
+      "U.A. Bakshi, A.V. Bakshi, K.A. Bakshi, \"Electrical Measurements\", Technical Publications, First Edition, 2008",
+      "J.B. Gupta, \"A Course in Electrical and Electronic Measurements & Instrumentation\", S.K. Kataria & Sons, Fourteenth Edition, 2014",
+      "H.S. Kalsi, \"Electronic Instrumentation and Measurements\", Vol. 2, McGraw-Hill, Fourth Edition, 2019",
+      "A.K. Sawhney, \"A Course in Electrical and Electronic Measurements and Instrumentation\", Dhanpat Rai & Co., 2021"
+    ]
+  },
+  {
+    "title": "Owen's Bridge",
+    "aim": "To determine the inductance of an unknown inductor by Owen's Bridge.",
+    "theory": {
+      "prev": "Owen's Bridge is an electrical circuit used to measure the inductance and resistance of an inductor. Similar to the Schering Bridge, Owen's Bridge compares an unknown inductor with known resistors and a variable capacitor. The bridge is particularly effective for measuring medium-quality factor inductors and is sensitive to frequency variations. It operates by balancing the bridge circuit, where the unknown inductor's inductance is determined based on the known values of the other components.",
+      "image": "@drawable/owens_bridge1",
+      "next": "A balance detector or null indicator is connected across two junctions of the bridge. When the bridge is balanced, the indicator shows no deflection. Let L1 be the unknown inductor with resistance R1, R2 and R3 be known non-inductive resistances, and C be a known variable capacitor.\n\nAt balance, the relationship is given by:\n\n(R1+jω*L1)/jω*C4 = (R2+1/(1+jω*C2))*R3 ----- (1)\n\nBy equating the real and imaginary parts, we get the values of\nL1=R2*R3*C4 ------ (2)\nR1=R3*C4/C2 ------ (3)\n"
+    },
+    "procedure": [
+      "Step 1. Pick up resistances, capacitor, inductor, ac source and speaker from the toolbox.",
+      "Step 2. Make connections as shown in the figure to form a Owen's bridge (red dot act as source and black dot act as destination).",
+      "Step 3. After making the circuit click on check circuit button to check the connections.",
+      "Step 4. Select value of capacitor and resistance R3.Now Enter value of source-voltage (in Volt), voltage-frequency(in Hz) and choose appropriate value of R2(in Ω) through slider and click on the submit button.",
+      "Step 5. Repeat the experiment untill the bridge gets balanced."
+    ],
+    "simulator": "https://tiwarianjani.github.io/owens-bridge-simulation/",
+    "result": "Results",
+    "pretest": [
+      {
+        "question": "Owen's bridge is used to measure _________.",
+        "answers": {
+          "a": "capacitance",
+          "b": "resistance",
+          "c": "inductance",
+          "d": "conductance"
+        },
+        "correctAnswer": "c"
+      },
+      {
+        "question": "In Owen's bridge, the unknown inductance L1 is compared with a known _________ connected to the arm cd.",
+        "answers": {
+          "a": "resistor R3",
+          "b": "capacitor C2",
+          "c": "inductor L2",
+          "d": "capacitor C4"
+        },
+        "correctAnswer": "d"
+      },
+      {
+        "question": "What happens in the balanced condition of Owen's bridge?",
+        "answers": {
+          "a": "Current flows through the bridge circuit",
+          "b": "No current flows through the bridge circuit",
+          "c": "Voltage drop is maximum across L1",
+          "d": "Voltage drop is minimum across C4"
+        },
+        "correctAnswer": "b"
+      },
+      {
+        "question": "The balanced equation of Owen's bridge is given by _________.",
+        "answers": {
+          "a": "Z1*Z4 = Z2*Z3",
+          "b": "Z1*Z3 = Z2*Z4",
+          "c": "Z1*Z2 = Z3*Z4",
+          "d": "Z2*Z4 = Z1*Z3"
+        },
+        "correctAnswer": "a"
+      },
+      {
+        "question": "How is the unknown inductance L1 determined in Owen's bridge?",
+        "answers": {
+          "a": "L1 = R2*R3*C4",
+          "b": "L1 = R2*R3*C4",
+          "c": "L1 = R2*R3*C4",
+          "d": "L1 = R2 + R3*C4"
+        },
+        "correctAnswer": "a"
+      }
+    ],
+    "posttest": [
+      {
+        "question": "What is the purpose of the null detector in Owen's bridge?",
+        "answers": {
+          "a": "To amplify the voltage across the bridge",
+          "b": "To indicate when the bridge is balanced",
+          "c": "To measure the frequency of the AC signal",
+          "d": "To control the flow of current through the bridge"
+        },
+        "correctAnswer": "b"
+      },
+      {
+        "question": "How does the balanced condition of Owen's bridge affect the null detector?",
+        "answers": {
+          "a": "It causes the null detector to display a maximum reading",
+          "b": "It causes the null detector to display a minimum reading",
+          "c": "It causes the null detector to display a random reading",
+          "d": "It causes the null detector to turn off"
+        },
+        "correctAnswer": "b"
+      },
+      {
+        "question": "What happens if the connections in Owen's bridge are incorrect?",
+        "answers": {
+          "a": "The bridge will not function",
+          "b": "The null detector will show a maximum reading",
+          "c": "The null detector will show a minimum reading",
+          "d": "The bridge will automatically adjust"
+        },
+        "correctAnswer": "a"
+      },
+      {
+        "question": "What is the role of the variable resistor in Owen's bridge?",
+        "answers": {
+          "a": "To control the frequency of the AC signal",
+          "b": "To adjust the balance of the bridge",
+          "c": "To amplify the voltage across the bridge",
+          "d": "To measure the current flowing through the bridge"
+        },
+        "correctAnswer": "b"
+      },
+      {
+        "question": "What parameter is directly measured by Owen's bridge?",
+        "answers": {
+          "a": "Voltage",
+          "b": "Current",
+          "c": "Resistance",
+          "d": "Inductance"
+        },
+        "correctAnswer": "c"
+      }
+    ],
+    "references": [
+      "U.A. Bakshi, A.V. Bakshi, K.A. Bakshi, \"Electrical Measurements\", Technical Publications, First Edition, 2008",
+      "J.B. Gupta, \"A Course in Electrical and Electronic Measurements & Instrumentation\", S.K. Kataria & Sons, Fourteenth Edition, 2014",
+      "H.S. Kalsi, \"Electronic Instrumentation and Measurements\", Vol. 2, McGraw-Hill, Fourth Edition, 2019",
+      "A.K. Sawhney, \"A Course in Electrical and Electronic Measurements and Instrumentation\", Dhanpat Rai & Co., 2021"
+    ]
+  },
+  {
+    "title": "Schering Bridge",
+    "aim": "To determine the capacitance of an unknown capacitor by Schering Bridge.",
+    "theory": {
+      "prev": "The Schering Bridge is a widely used ac electrical circuit for accurately measuring the capacitance and dissipation factor of capacitors. This bridge is capable of handling high voltage measurements. However, it is important to note that the accuracy of the Schering Bridge is sensitive to frequency variations. The bridge operates by comparing the unknown capacitor with a known standard capacitor.",
+      "image": "@drawable/schering_bridge1",
+      "next": "A balance detector or null indicator is connected across two junctions of the bridge. When the bridge is balanced, the indicator shows no deflection, indicating that the potentials at the junctions are equal. Let C1 be the unknown capacitor whose value is to be measured, R1 be the series resistance representing the loss in C1, C2 be a standard capacitor with negligible loss, and R2 and R3 be non-inductive resistances. At balance, the relationship is given by:\n\n(R1+(1/jωC1))*(R4/(1+jω*C4*R4)) = (1/jωC2)*R3 -------- (1)\n\nR1*R3+(R3/jω*C1) = (R2/jω*C2) --------- (2) \n\nBy equating the real and imaginary parts, we get:\n\nR1*R4-(jR4/ωC1) = ((R3*R4*C4)/C2)-(jR3/ωC2)\n\nR1 = R3*C4/C2\nand C1 = C2*R3/R2"
+    },
+    "procedure": [
+      "Step 1. Pick up resistances, capacitors, ac source and speaker from the toolbox.",
+      "Step 2. Make the connections (red-dot act as source and black-dot act as destination) as shown in the figure to form a Schering bridge.",
+      "Step 3. After making the circuit click on check circuit button to check the connections.",
+      "Step 4. Select the capacitance and resistor R3.Now enter ac source voltage (in Volt), source-frequency (in Hz) and choose appropriate value of R4 (in Ω ) through slider then click on the submit button.",
+      "Step 5. Repeat the experiment untill the bridge gets balanced.",
+      "Step 6. Select the ratio of R4/R3 in multiple of 100."
+    ],
+    "simulator": "https://tiwarianjani.github.io/scaring-bridge/",
+    "result": "Results",
+    "pretest": [
+      {
+        "question": "Schering bridge is used for _________.",
+        "answers": {
+          "a": "low voltages only",
+          "b": "low and high voltages",
+          "c": "high voltages only",
+          "d": "intermediate voltages only"
+        },
+        "correctAnswer": "b"
+      },
+      {
+        "question": "Power factor of a Schering bridge is _________.",
+        "answers": {
+          "a": "p.f. = sin∅x = Zx⁄Rx",
+          "b": "p.f. = cot∅x = Rx⁄Zx",
+          "c": "p.f. = cos∅x = Rx⁄Zx",
+          "d": "p.f. = tan∅x = Rx⁄Zx"
+        },
+        "correctAnswer": "c"
+      },
+      {
+        "question": "For phase angle close to 90°, the power factor of the bridge is _________.",
+        "answers": {
+          "a": "p.f. = ωRx",
+          "b": "p.f. = ωCx",
+          "c": "p.f. = Rx*Cx",
+          "d": "p.f. = ωRx*Cx"
+        },
+        "correctAnswer": "d"
+      },
+      {
+        "question": "For a series RC circuit, what is δ?",
+        "answers": {
+          "a": "voltage between series RC combination and C",
+          "b": "voltage between series RC combination",
+          "c": "voltage across C",
+          "d": "voltage across R"
+        },
+        "correctAnswer": "b"
+      },
+      {
+        "question": "What is the expression for the loss angle?",
+        "answers": {
+          "a": "tan⁡ δ = ωR4",
+          "b": "tan⁡ δ = ωR4*C4",
+          "c": "tan⁡ δ = ωC4",
+          "d": "tan⁡ δ = R4*C4"
+        },
+        "correctAnswer": "b"
+      }
+    ],
+    "posttest": [
+      {
+        "question": "Quality factor is given by which of the following expression?",
+        "answers": {
+          "a": "Q = 1/R",
+          "b": "Q = R",
+          "c": "Q = X/R",
+          "d": "Q = X*R"
+        },
+        "correctAnswer": "c"
+      },
+      {
+        "question": "Commercial Schering bridge can be used for the measurement of capacitances from _____________.",
+        "answers": {
+          "a": "10pF to 0.1nF",
+          "b": "100pF to 1μF",
+          "c": "50nF to 10mF",
+          "d": "25mF to 5F"
+        },
+        "correctAnswer": "b"
+      },
+      {
+        "question": "A Schering bridge can be used for the __________.",
+        "answers": {
+          "a": "testing capacitors",
+          "b": "measuring currents",
+          "c": "measuring voltages",
+          "d": "protecting the circuit from temperature rises"
+        },
+        "correctAnswer": "a"
+      },
+      {
+        "question": "The detector used in a high voltage Schering bridge is _________.",
+        "answers": {
+          "a": "tunable circuit",
+          "b": "e.m.f source",
+          "c": "headphone",
+          "d": "vibration galvanometer"
+        },
+        "correctAnswer": "d"
+      },
+      {
+        "question": "How are the inter-capacitance errors minimized?",
+        "answers": {
+          "a": "by separating the plates of the capacitance",
+          "b": "by using earthing",
+          "c": "by reducing the area of cross section of the capacitors",
+          "d": "by increasing the distance between the capacitor plates"
+        },
+        "correctAnswer": "d"
+      }
+    ],
+    "references": [
+      "U.A. Bakshi, A.V. Bakshi, K.A. Bakshi, \"Electrical Measurements\", Technical Publications, First Edition, 2008",
+      "J.B. Gupta, \"A Course in Electrical and Electronic Measurements & Instrumentation\", S.K. Kataria & Sons, Fourteenth Edition, 2014",
+      "H.S. Kalsi, \"Electronic Instrumentation and Measurements\", Vol. 2, McGraw-Hill, Fourth Edition, 2019",
+      "A.K. Sawhney, \"A Course in Electrical and Electronic Measurements and Instrumentation\", Dhanpat Rai & Co., 2021"
+    ]
+  },
+  {
+    "title": "Anderson Bridge",
+    "aim": "To measure the value of unknown inductance with the help of Anderson's Bridge.",
+    "theory": {
+      "prev": "AC bridges are often used to measure the value of unknown impedance (self/mutual inductance of inductors or capacitance of capacitors accurately). A large number of AC bridges are available and Anderson's Bridge is an AC bridge used to measure self inductance of the coil. It is a modification of Wheatstones Bridge. It enables us to measure the inductance of a coil using capacitor and resistors and does not require repeated balancing of the bridge.\n",
+      "image": "@drawable/anderson_bridge1",
+      "next": "The bridge is balanced by a steady current by replacing the headphone H by moving coil galvanometer and AC source by a battery. This is done by adjusting the variable resistance, r. After a steady balance has been obtained, inductive balance is obtained by using the AC source and headphone.\n\nTo measure the unknown inductance (having some resistance) by using standard capacitance:\n\nEquivalent Impedance:\nz1 = l1 + r1 + r3,\nz2 = r2 + (r4 * (r5+c1)) / (r5+r4+c1),\nZ_(eq) = (z1 * z2) / (z1 + z2)\n\nCurrent Through the battery is: I_(Bt) = V / Z_(eq)\n\nIf Bridge is Balanced, Voltage difference between galvanometer terminals is 0 and Current through the galvanometer is 0.\n\nConditions for Balance: \nr = (r2 * r3) / r4 - r1,\nl = (c1 * r3) / r4 * (r2 * r4 + r5 * (r2 + r4))"
+    },
+    "procedure": [
+      "Step 1. Pick up four resistances, two inductors and a AC voltage source from the toolbox.",
+      "Step 2. Connect the elements as shown in the figure to form Maxwell Bridge.",
+      "Step 3. After making the circuit click on check circuit button to check the connections.",
+      "Step 4. Now Enter the the value of R2, R3, Volatge and Frequency and try to make deflection in meter close to zero.",
+      "Step 5. Calculate the value of inductance using the formula given and check the value using the check button.",
+      "Step 6. Enter the value untill the bridge gets balanced.",
+      "Step 7. Click on submit button to add it into observation table.",
+      "Step 8. Repeat the Experiment for new generated value of inductance.",
+      "PS. You can also try to listen the detector sound."
+    ],
+    "simulator": "https://raosatyam.github.io/Andersion_Bridge/",
+    "result": "Results",
+    "pretest": [
+      {
+        "question": "AC bridges are used for the measurement of",
+        "answers": {
+          "a": "Resistance",
+          "b": "Resistance and Inductance",
+          "c": "Inductance and capacitance",
+          "d": "Resistance, inductance and capacitance"
+        },
+        "correctAnswer": "d"
+      },
+      {
+        "question": "The commonly used detectors in ac bridges is/are",
+        "answers": {
+          "a": "Head phones",
+          "b": "Galvanometers",
+          "c": "Tuned amplifiers, Head phones",
+          "d": "Head phones, Tuned amplifiers, Galvanometers"
+        },
+        "correctAnswer": "b"
+      },
+      {
+        "question": "The vibration galvanometers are sensitive to power for frequency range of",
+        "answers": {
+          "a": "200 Hz and below",
+          "b": "200 Hz to about 4 KHz",
+          "c": "4 KHz and above",
+          "d": "Any frequency"
+        },
+        "correctAnswer": "b"
+      },
+      {
+        "question": "The vibration galvanometer used as detector, it responds",
+        "answers": {
+          "a": "Only to the fundamental frequency",
+          "b": "Only to the harmonics frequency",
+          "c": "Both (a) and (b)",
+          "d": "Does not respond to any frequency"
+        },
+        "correctAnswer": "c"
+      },
+      {
+        "question": "The AC Bridge used for the measurement of inductance is/are",
+        "answers": {
+          "a": "Maxwell’s inductance bridge",
+          "b": "Hay’s bridge",
+          "c": "Anderson’s bridge, Owen’s bridge",
+          "d": "All of the above"
+        },
+        "correctAnswer": "d"
+      }
+    ],
+    "posttest": [
+      {
+        "question": "Under balanced condition, the current flowing through the detector is equal to",
+        "answers": {
+          "a": "1 A",
+          "b": "0 A",
+          "c": "Sum of the currents flowing in the adjacent arms",
+          "d": "Difference between the current flowing in the adjacent arms"
+        },
+        "correctAnswer": "b"
+      },
+      {
+        "question": "What is the significance of Anderson bridge with respect to Q factor?",
+        "answers": {
+          "a": "difficult to balance the bridge",
+          "b": "easy to balance the bridge",
+          "c": "intermediate balance can be achieved",
+          "d": "no balance can be done"
+        },
+        "correctAnswer": "b"
+      },
+      {
+        "question": "Which one of the following is a frequency sensitive bridge?",
+        "answers": {
+          "a": "Maxwell bridge",
+          "b": "De Sauty bridge",
+          "c": "Wien bridge",
+          "d": "Schering bridge"
+        },
+        "correctAnswer": "c"
+      },
+      {
+        "question": "The accuracy of a bridge depends on the",
+        "answers": {
+          "a": "null indicator",
+          "b": "voltage source",
+          "c": "current source",
+          "d": "bridge components"
+        },
+        "correctAnswer": "d"
+      },
+      {
+        "question": "AC bridges are used for the measurement of",
+        "answers": {
+          "a": "Resistance, inductance and capacitance",
+          "b": "Resistance and Inductance",
+          "c": "Inductance and capacitance",
+          "d": "Resistance"
+        },
+        "correctAnswer": "a"
+      }
+    ],
+    "references": [
+      "U.A. Bakshi, A.V. Bakshi, K.A. Bakshi, \"Electrical Measurements\", Technical Publications, First Edition, 2008",
+      "J.B. Gupta, \"A Course in Electrical and Electronic Measurements & Instrumentation\", S.K. Kataria & Sons, Fourteenth Edition, 2014",
+      "H.S. Kalsi, \"Electronic Instrumentation and Measurements\", Vol. 2, McGraw-Hill, Fourth Edition, 2019",
+      "A.K. Sawhney, \"A Course in Electrical and Electronic Measurements and Instrumentation\", Dhanpat Rai & Co., 2021"
+    ]
+  },
+  {
+    "title": "Wiens Series Bridge",
+    "aim": "The aim of this experiment is to measure unknown Capacitance and Resistance using Wein Bridge.",
+    "theory": {
+      "prev": "The Wien's bridge is an ac electrical circuit widely used for measuring frequency and capacitance with high accuracy. The bridge can be used even at high voltages but the circuit is sensitive to frequency. The Wien Robinson bridge has a series and parallel combination of R-C.",
+      "image": "@drawable/wien_robinson_bridge1",
+      "next": "A balance detector or null indicator is connected across two junctions (i.e., across BD as shown above). The indicator shows null deflection when the bridge is balanced i.e. when the junctions B and D will be at the same potential.\n\nLet, C1 = Capacitor connected in parallel to Resistance,\nR1 = A resistance connected in parallel with capacitor C1,\nC2 = A standard capacitance with series resistance of R2,\nR2 and R3 = Non-inductive resistances.\n\nIt is ratio real type bridge, for balance we have,\n\n(R1/(1+jωC1R1))∗R4 = (R2−(j/ωC2))∗R3\n\nR4/R3=R2/R1+C1/C2+j(ωC1R1−(1/C2*R2)) ----- (1)\n\nEquating real and imaginary parts of eq.(1), we have\nR4/R3 = R2/R1+C1/C2 ----- (2)\nand, ω = 1/√(R1*R2*C1*C2) ----- (3)\nthen, f = 1/2π√(R1*R2*C1*C2)\n"
+    },
+    "procedure": [
+      "STEP 1: Pick up four resistances, two capacitors, a battery and a headphone from the Components.",
+      "STEP 2: Connect the resistances, capacitors and the battery as shown in the figure to form a Wein series bridge.",
+      "STEP 3: Click on check circuit button to check the connections.",
+      "STEP 4: Now choose R1,R2 and R3 to a fixed value and vary the value of R4 only such that ratio (R4/R3) is nearly an integer between 1 to 5, and fix it to the value where the sound frequency changes from loud beap to pleasant sound.",
+      "STEP 5: Hit the submit button and make the resistance arm ratio mentioned in the alert equal to the arm ratio not mentioned as per the balancing condition.",
+      "STEP 6: Now observe the reading of digital meter as it drops to zero hit\"Submit\" button.",
+      "STEP 7: Repeat the experiment by changing the values of resistances and note atleast 3 readings."
+    ],
+    "simulator": "https://shivamchs.github.io/Wiens-Series/",
+    "result": "Results",
+    "pretest": [
+      {
+        "question": "Wein bridge can be used for _________.",
+        "answers": {
+          "a": "Measurement of Inductance",
+          "b": "Measurement of Capacitance and Resistance",
+          "c": "Measurement of Resistance",
+          "d": "Measurement of Voltage and Current"
+        },
+        "correctAnswer": "c"
+      },
+      {
+        "question": "Balance equation for computing the value of an unknown resistance is?",
+        "answers": {
+          "a": "Rx = R2/R1",
+          "b": "Rx = R2*R3/R1",
+          "c": "Rx = R1*R3/R2",
+          "d": "Rx = R3/R1"
+        },
+        "correctAnswer": "d"
+      },
+      {
+        "question": "Balance equation for computing the value of an unknown capacitance is?",
+        "answers": {
+          "a": "Cx = C1*R2/R3",
+          "b": "Cx = R2*C1",
+          "c": "Cx = R2*R3/C1",
+          "d": "Cx = R3*C1"
+        },
+        "correctAnswer": "a"
+      },
+      {
+        "question": "The AC Bridge which is used for the measurement of frequency is?",
+        "answers": {
+          "a": "Maxwell's Bridge",
+          "b": "Schering Bridge",
+          "c": "Hay's Bridge",
+          "d": "Wein's Bridge"
+        },
+        "correctAnswer": "d"
+      },
+      {
+        "question": "Which of the following bridges is used to measure power factor?",
+        "answers": {
+          "a": "Wein's Bridge",
+          "b": "Maxwell's Bridge",
+          "c": "Schering Bridge",
+          "d": "Kelvin Bridge"
+        },
+        "correctAnswer": "c"
+      }
+    ],
+    "posttest": [
+      {
+        "question": "Which one of the following bridges is a type of DC bridge?",
+        "answers": {
+          "a": "Wheatstone Bridge",
+          "b": "Schering Bridge",
+          "c": "Wein Bridge",
+          "d": "All of the above"
+        },
+        "correctAnswer": "a"
+      },
+      {
+        "question": "The Wien’s bridge is suitable for the measurement of frequency of the range of?",
+        "answers": {
+          "a": "Less than 100Hz",
+          "b": "1KHz to 100MHz",
+          "c": "100Hz to 100KHz",
+          "d": "More than 100MHz"
+        },
+        "correctAnswer": "c"
+      },
+      {
+        "question": "The dielectric loss of pure capacitor is equal to-",
+        "answers": {
+          "a": "1",
+          "b": "0",
+          "c": "Maximum",
+          "d": "None of the above"
+        },
+        "correctAnswer": "b"
+      },
+      {
+        "question": "Under balanced condition, the current flowing through the detector is equal to-",
+        "answers": {
+          "a": "1A",
+          "b": "0A",
+          "c": "Sum of the currents flowing in the adjacent arms",
+          "d": "Difference between the current flowing in the adjacent arms"
+        },
+        "correctAnswer": "b"
+      },
+      {
+        "question": "The commonly used detectors in AC bridges is/are-",
+        "answers": {
+          "a": "HeadPhones",
+          "b": "Galvanometers",
+          "c": "Tuned Amplifiers",
+          "d": "All of the above"
+        },
+        "correctAnswer": "d"
+      }
+    ],
+    "references": [
+      "U.A. Bakshi, A.V. Bakshi, K.A. Bakshi, \"Electrical Measurements\", Technical Publications, First Edition, 2008",
+      "J.B. Gupta, \"A Course in Electrical and Electronic Measurements & Instrumentation\", S.K. Kataria & Sons, Fourteenth Edition, 2014",
+      "H.S. Kalsi, \"Electronic Instrumentation and Measurements\", Vol. 2, McGraw-Hill, Fourth Edition, 2019",
+      "A.K. Sawhney, \"A Course in Electrical and Electronic Measurements and Instrumentation\", Dhanpat Rai & Co., 2021"
+    ]
+  },
+  {
+    "title": "Wien Robinson Bridge",
+    "aim": "To determine the frequency of signal generator by employing the Wein Robinson's Bridge.",
+    "theory": {
+      "prev": "The Wien's bridge is an ac electrical circuit widely used for measuring frequency and capacitance with high accuracy. The bridge can be used even at high voltages but the circuit is sensitive to frequency. The Wien Robinson bridge has a series and parallel combination of R-C.",
+      "image": "@drawable/wien_robinson_bridge1",
+      "next": "A balance detector or null indicator is connected across two junctions (i.e., across BD as shown above). The indicator shows null deflection when the bridge is balanced i.e. when the junctions B and D will be at the same potential.\n\nLet, C1 = Capacitor connected in parallel to Resistance,\nR1 = A resistance connected in parallel with capacitor C1,\nC2 = A standard capacitance with series resistance of R2,\nR2 and R3 = Non-inductive resistances.\n\nIt is ratio real type bridge, for balance we have,\n\n(R1/(1+jωC1R1))∗R4 = (R2−(j/ωC2))∗R3\n\nR4/R3=R2/R1+C1/C2+j(ωC1R1−(1/C2*R2)) ----- (1)\n\nEquating real and imaginary parts of eq.(1), we have\nR4/R3 = R2/R1+C1/C2 ----- (2)\nand, ω = 1/√(R1*R2*C1*C2) ----- (3)\nthen, f = 1/2π√(R1*R2*C1*C2)\n"
+    },
+    "procedure": [
+      "Step 1: Pick up four resistances,two capacitors, a ac voltage source and a detector from the toolbox.",
+      "Step 2: Connect the elements as shown in the figure to form a Wien Robinson's frequency Bridge.",
+      "Step 3: After making the circuit click on check circuit button to check the connections.",
+      "Step 4: Select the ratio (R4/R3) from the dropdown available (default value is 2).",
+      "Step 5: Now enter the values of resistors and capacitors such that first equation of balancing is satisfied i.e. (R4/R3)=(R2/R1) +(C1/C2). Enter AC voltage source value and click on the submit button. A blanck value of digital meter indicates that first balancing condition is not met.",
+      "Step 6: After entrering all values digital meter shows deviation from the actual frequency value where a negative value shows that calculated frequency is lesser than the actual frequency while a positive value refers to larger calculated value and a zero value represents balanced bridge.",
+      "Step 7: In order to fix negative value of digital meter decrease the resistance and capacitance values keeping the initial ratio constant and for fixing a positive value increase the resistance and capacitance value satisfying the first balancing condition.",
+      "Step 8: Repeat the experiment until the bridge gets balanced.",
+      "Step 9: After balancing the bridge, unknown frequency will be automatically added to the observation table.",
+      "Step 10: Take atleast 5-7 readings at different value of inputs and calculate the average of all values."
+    ],
+    "simulator": "https://shivamchs.github.io/Wien-Robinson-s-bridge/",
+    "result": "Results",
+    "pretest": [
+      {
+        "question": "Wien Robinson bridge is used for measuring ________.",
+        "answers": {
+          "a": "resistance",
+          "b": "capacitance",
+          "c": "inductance",
+          "d": "voltage"
+        },
+        "correctAnswer": "d"
+      },
+      {
+        "question": "Wien Robinson bridge is sensitive to ________.",
+        "answers": {
+          "a": "resistance",
+          "b": "capacitance",
+          "c": "frequency",
+          "d": "voltage"
+        },
+        "correctAnswer": "c"
+      },
+      {
+        "question": "The bridge equation for Wien Robinson bridge involves ________.",
+        "answers": {
+          "a": "resistors and capacitors",
+          "b": "inductors and capacitors",
+          "c": "resistors and inductors",
+          "d": "resistors, capacitors, and frequency"
+        },
+        "correctAnswer": "c"
+      },
+      {
+        "question": "Wien Robinson bridge can be used for measuring frequency in the range of ________.",
+        "answers": {
+          "a": "10 Hz to 1 kHz",
+          "b": "1 kHz to 10 MHz",
+          "c": "100 kHz to 10 GHz",
+          "d": "1 Hz to 100 MHz"
+        },
+        "correctAnswer": "d"
+      },
+      {
+        "question": "The null indicator in Wien Robinson bridge shows null deflection when ________.",
+        "answers": {
+          "a": "the bridge is unbalanced",
+          "b": "the bridge is balanced",
+          "c": "the frequency is too low",
+          "d": "the frequency is too high"
+        },
+        "correctAnswer": "b"
+      }
+    ],
+    "posttest": [
+      {
+        "question": "What is the main advantage of using the Wien Robinson bridge for measuring capacitance?",
+        "answers": {
+          "a": "High accuracy",
+          "b": "Low cost",
+          "c": "Wide frequency range",
+          "d": "Small size"
+        },
+        "correctAnswer": "c"
+      },
+      {
+        "question": "Which component of the Wien Robinson bridge is sensitive to frequency?",
+        "answers": {
+          "a": "Resistor R1",
+          "b": "Capacitor C1",
+          "c": "Resistor R3",
+          "d": "Capacitor C2"
+        },
+        "correctAnswer": "b"
+      },
+      {
+        "question": "What is the formula for calculating the frequency using the Wien Robinson bridge?",
+        "answers": {
+          "a": "1/2π√(R1*R2*C1*C2)",
+          "b": "1/(R1*C1)",
+          "c": "(R1*R2*C1*C2)/2π",
+          "d": "R1/2πC1"
+        },
+        "correctAnswer": "a"
+      },
+      {
+        "question": "In a Wien Robinson bridge, what happens when the bridge is balanced?",
+        "answers": {
+          "a": "Null deflection of the indicator",
+          "b": "Maximum voltage across resistor R3",
+          "c": "Minimum current through resistor R2",
+          "d": "High frequency oscillations"
+        },
+        "correctAnswer": "a"
+      },
+      {
+        "question": "What is the primary application of the Wien Robinson bridge?",
+        "answers": {
+          "a": "Measurement of resistance",
+          "b": "Measurement of inductance",
+          "c": "Measurement of frequency",
+          "d": "Measurement of voltage"
+        },
+        "correctAnswer": "c"
+      }
+    ],
+    "references": [
+      "U.A. Bakshi, A.V. Bakshi, K.A. Bakshi, \"Electrical Measurements\", Technical Publications, First Edition, 2008",
+      "J.B. Gupta, \"A Course in Electrical and Electronic Measurements & Instrumentation\", S.K. Kataria & Sons, Fourteenth Edition, 2014",
+      "H.S. Kalsi, \"Electronic Instrumentation and Measurements\", Vol. 2, McGraw-Hill, Fourth Edition, 2019",
+      "A.K. Sawhney, \"A Course in Electrical and Electronic Measurements and Instrumentation\", Dhanpat Rai & Co., 2021"
+    ]
+  },
+  {
+    "title": "Hay's Bridge",
+    "aim": "To measure the unknown value of Inductor with a high Q factor using a Hay's Bridge.",
+    "theory": {
+      "prev": "The Hay’s bridge is used for determining the self-inductance of the circuit. The bridge is the advanced form of Maxwell’s bridge.\n",
+      "image": "@drawable/hays_bridge1",
+      "next": "In Hay’s bridge, the capacitor is connected in series with the resistance, the voltage drop across the capacitance and resistance are varied.\n\nLet L be the inductance whose value is to be determined, R1, R2 and R3 be the variable resistance, C be the variable capacitance.\n\nAt the balance condition,\n\n(R1 + jw*L1)*(R4 - j/w*C4) = R2*R3\n\nFor inductor with high Quality Factor,\nL = R2*R3*C.\n\nThis provides a relationship for determining the unknown inductance L2 using the given method.\n"
+    },
+    "procedure": [
+      "STEP 1: Pick up three resistances, a battery, a inductance, a capcitor and a galvanometer from the toolbox.",
+      "STEP 2: Connect all component as shown in the figure to form a Hays Bridge Circuit.",
+      "STEP 3: After making the circuit click on check circuit button to check the connections",
+      "STEP 4: Now Enter the the value of R2, R3, Capacitance, Volatge and Frequency and try to make deflection in meter close to zero.",
+      "STEP 5: Calculate the value of inductance using the formula given and check the value using the check button.",
+      "STEP 6: Enter the value untill the bridge gets balanced.",
+      "STEP 7: Click on submit button to add it into observation table.",
+      "STEP 8: Repeat the Experiment for new generated value of inductance."
+    ],
+    "simulator": "https://raosatyam.github.io/Hay-s-Bridge/",
+    "result": "Results",
+    "pretest": [
+      {
+        "question": "What is the primary purpose of Hay's bridge?",
+        "answers": {
+          "a": "Measure resistance",
+          "b": "Measure capacitance",
+          "c": "Measure inductance",
+          "d": "Measure power"
+        },
+        "correctAnswer": "c"
+      },
+      {
+        "question": "In Hay's bridge, what is varied to achieve balance?",
+        "answers": {
+          "a": "Voltage",
+          "b": "Current",
+          "c": "Resistance",
+          "d": "Capacitance"
+        },
+        "correctAnswer": "d"
+      },
+      {
+        "question": "What condition must be met for the Hay's bridge to measure inductance accurately?",
+        "answers": {
+          "a": "Low quality factor",
+          "b": "High quality factor",
+          "c": "High voltage",
+          "d": "Low frequency"
+        },
+        "correctAnswer": "b"
+      },
+      {
+        "question": "Which of the following components are varied in Hay's bridge?",
+        "answers": {
+          "a": "Inductance and resistance",
+          "b": "Capacitance and resistance",
+          "c": "Voltage and current",
+          "d": "Frequency and impedance"
+        },
+        "correctAnswer": "b"
+      },
+      {
+        "question": "How is the unknown inductance determined in Hay's bridge?",
+        "answers": {
+          "a": "By measuring resistance directly",
+          "b": "Using a null detector",
+          "c": "By balancing resistance and capacitance",
+          "d": "Through a mathematical relationship involving resistances and capacitance"
+        },
+        "correctAnswer": "d"
+      }
+    ],
+    "posttest": [
+      {
+        "question": "What is the primary advantage of using Hay's Bridge over Maxwell's Bridge?",
+        "answers": {
+          "a": "Higher accuracy in resistance measurement",
+          "b": "Simplicity in circuit design",
+          "c": "Ability to measure inductance and capacitance simultaneously",
+          "d": "Lower sensitivity to frequency variations"
+        },
+        "correctAnswer": "c"
+      },
+      {
+        "question": "How does Hay's Bridge determine the unknown inductance?",
+        "answers": {
+          "a": "By measuring the voltage across the inductor",
+          "b": "By adjusting the resistance in the circuit until a balance is achieved",
+          "c": "Through a mathematical relationship involving resistances and capacitance",
+          "d": "By measuring the current flowing through the inductor"
+        },
+        "correctAnswer": "b"
+      },
+      {
+        "question": "What condition must be met for Hay's Bridge to accurately measure inductance?",
+        "answers": {
+          "a": "Low resistance in the circuit",
+          "b": "High quality factor (Q factor)",
+          "c": "Low capacitance in the circuit",
+          "d": "High frequency of operation"
+        },
+        "correctAnswer": "b"
+      },
+      {
+        "question": "What is the significance of the balance condition in Hay's Bridge?",
+        "answers": {
+          "a": "It indicates the absence of any resistance in the circuit",
+          "b": "It ensures that the circuit operates at its resonant frequency",
+          "c": "It allows for the accurate measurement of the unknown inductance",
+          "d": "It minimizes the power dissipation in the circuit"
+        },
+        "correctAnswer": "c"
+      },
+      {
+        "question": "In what range of frequencies is Hay's Bridge typically used?",
+        "answers": {
+          "a": "Extremely low frequencies below 1 Hz",
+          "b": "Audio frequencies in the range of 20 Hz to 20 kHz",
+          "c": "Radio frequencies above 1 MHz",
+          "d": "Microwave frequencies in the GHz range"
+        },
+        "correctAnswer": "b"
+      }
+    ],
+    "references": [
+      "U.A. Bakshi, A.V. Bakshi, K.A. Bakshi, \"Electrical Measurements\", Technical Publications, First Edition, 2008",
+      "J.B. Gupta, \"A Course in Electrical and Electronic Measurements & Instrumentation\", S.K. Kataria & Sons, Fourteenth Edition, 2014",
+      "H.S. Kalsi, \"Electronic Instrumentation and Measurements\", Vol. 2, McGraw-Hill, Fourth Edition, 2019",
+      "A.K. Sawhney, \"A Course in Electrical and Electronic Measurements and Instrumentation\", Dhanpat Rai & Co., 2021"
+    ]
+  }
+]

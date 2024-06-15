@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="16dp"
+    tools:context=".AimFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aim"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:id="@+id/aimTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="This is my aim"
+        android:textSize="16sp"
+        android:lineHeight="24sp"
+        android:textColor="@color/gray"/>
+
+</LinearLayout>
